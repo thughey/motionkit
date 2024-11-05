@@ -7,7 +7,7 @@
   --border-radius--medium: .5rem;
   --base-color-neutral--neutral-darker: #222;
   --text-color--text-secondary: var(--base-color-neutral--neutral-darker);
-  --border-radius--small: .25rem;
+  --border-radius--small: .35rem;
   --base-color-system--focus-state: #2d62ff;
   --background-color--background-tertiary: var(--base-color-brand--pink);
   --base-color-neutral--neutral-lightest: #eee;
@@ -26,8 +26,8 @@
   --background-color--background-success: var(--base-color-system--success-green);
   --text-color--text-success: var(--base-color-system--success-green-dark);
   --border-color--border-primary: var(--base-color-neutral--neutral-lightest);
-  --base-color-brand--blue-light: #d9e5ff;
   --base-color-brand--blue: #2d62ff;
+  --base-color-brand--blue-light: #d9e5ff;
   --base-color-brand--blue-dark: #080331;
   --base-color-brand--pink-light: #ffaefe;
   --base-color-brand--pink: #dd23bb;
@@ -271,7 +271,7 @@ figcaption {
 }
 
 .padding-medium {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .margin-small {
@@ -3763,7 +3763,40 @@ figcaption {
 .div-block-6 {
   border-radius: var(--border-radius--small);
   background-color: var(--base-color-neutral--white);
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem;
+  display: flex;
+}
+
+.div-block-7 {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.div-block-8 {
+  border-radius: var(--border-radius--small);
+  background-color: var(--base-color-brand--blue);
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}
+
+.div-block-8.outline {
+  border: 1px solid var(--border-color--border-primary);
+  background-color: #2d62ff00;
+}
+
+.div-block-9 {
+  grid-column-gap: .625rem;
+  grid-row-gap: .625rem;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
