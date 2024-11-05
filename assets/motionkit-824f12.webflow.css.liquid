@@ -493,7 +493,7 @@ figcaption {
 }
 
 .text-size-regular {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .text-align-right {
@@ -3742,9 +3742,28 @@ figcaption {
 }
 
 .div-block-3 {
+  flex-flow: row;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   display: flex;
+}
+
+.div-block-4 {
+  background-color: var(--border-color--border-primary);
+  flex-flow: column;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
+
+.div-block-5 {
+  flex: 1;
+}
+
+.div-block-6 {
+  border-radius: var(--border-radius--small);
+  background-color: var(--base-color-neutral--white);
+  padding: 2rem;
 }
 
 @media screen and (max-width: 991px) {
