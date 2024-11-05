@@ -25,11 +25,7 @@
 <div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="footer_divider"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_icon-grid"><div class="footer_icon-block"><div class="text-size-regular text-color-white">Delivery</div><div class="footer_icon-row">{% for block in section.blocks %}
     {% if block.type == "lieferung-icon" %}
                     <div li-block="Lieferung-icon" class="footer_icon-item">
-                                    <img class="footer_shipping-icon"
-     alt="{{ block.settings.image_icon.alt }}"
-
-     src="{{ block.settings.image_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icon.alt }}" class="footer_shipping-icon"}
->
+                                    <img src="{{ block.settings.image_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icon.alt }}" class="footer_shipping-icon"}>
 
                             </div>
             {% endif %}
@@ -42,7 +38,7 @@
 {% endfor %}</ul></div><div class="footer_icon-block"><div class="text-size-regular text-color-white">Social Media</div><div class="footer_icon-row">{% for block in section.blocks %}
     {% if block.type == "social-media" %}
                     <div li-block="Social-media" class="footer_icon-item">
-                                    <a href="{{ block.settings.url_social_link }}" target="_blank" class="footer_social-link w-inline-block"> <img class="footer_social-icon" alt="{{ block.settings.image_social_icon.alt }}" src="{{ block.settings.image_social_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_social_icon.alt }}" class="footer_social-icon"}> </a>
+                                    <a href="{{ block.settings.url_social_link }}" target="_blank" class="footer_social-link w-inline-block"> <img src="{{ block.settings.image_social_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_social_icon.alt }}" class="footer_social-icon"}> </a>
 
                             </div>
             {% endif %}
