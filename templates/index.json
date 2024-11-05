@@ -1,28 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "liquify_hero": {
-            "type": "liquify_hero"
-        },
-        "hero": {
-            "type": "hero"
-        },
-        "category": {
-            "type": "category"
-        },
-        "links": {
-            "type": "links"
-        },
-        "content": {
-            "type": "content"
-        }
+  "sections": {
+    "liquify_hero": {
+      "type": "liquify_hero",
+      "settings": {
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "liquify_hero",
-        "hero",
-        "category",
-        "links",
-        "content"
-    ]
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "text_headline": "Short heading here",
+        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+        "url_button_link": "",
+        "text_button_text": "More Information"
+      }
+    },
+    "category": {
+      "type": "category",
+      "settings": {
+        "text_headline": "Short heading here",
+        "url_button_link": "",
+        "text_button_text": "All products",
+        "collection_collection": "frontpage",
+        "collection_collection_limit": 6
+      }
+    },
+    "links": {
+      "type": "links",
+      "settings": {
+        "text_headline": "Short heading here"
+      }
+    },
+    "content": {
+      "type": "content",
+      "settings": {
+        "text_headline": "Short heading here",
+        "text_button_text": "All Articles",
+        "url_button_link": "",
+        "url_artikel_1_link": "",
+        "text_artikel_1_titel": "Blog title heading will go here",
+        "text_artikel_1_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "article_artikel_2": "",
+        "url_artikel_2_link": "",
+        "text_artikel_2_titel": "Blog title heading will go here",
+        "text_artikel_2_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "article_artikel_3": "",
+        "url_artikel_3_link": "",
+        "text_artikel_3_titel": "Blog title heading will go here",
+        "text_artikel_3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "liquify_hero",
+    "hero",
+    "category",
+    "links",
+    "content"
+  ]
 }
