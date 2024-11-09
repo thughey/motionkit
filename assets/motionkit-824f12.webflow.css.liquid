@@ -557,7 +557,7 @@ figcaption {
 }
 
 .heading-style-h4 {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -805,7 +805,7 @@ figcaption {
 }
 
 .section_navbar {
-  z-index: 10;
+  z-index: 100;
   background-color: var(--base-color-neutral--white);
   position: sticky;
   top: 0;
@@ -1562,14 +1562,14 @@ figcaption {
 
 .product-item_image-wrapper {
   width: 100%;
-  padding-top: 100%;
+  padding-top: 120%;
   position: relative;
   overflow: hidden;
 }
 
 .product-item_image {
   background-color: var(--base-color-neutral--neutral-lightest);
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1622,13 +1622,19 @@ figcaption {
   grid-template-columns: auto 1fr auto;
   grid-auto-columns: 1fr;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   height: 100%;
   min-height: 4rem;
   margin-left: auto;
   margin-right: auto;
   display: grid;
+}
+
+.nav_logo-link {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .nav_menu {
@@ -1638,6 +1644,8 @@ figcaption {
 }
 
 .nav_menu.is-page-height-tablet {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
   align-items: stretch;
   position: relative;
 }
@@ -1659,7 +1667,7 @@ figcaption {
   align-items: center;
   width: .7rem;
   height: .7rem;
-  margin: auto 1rem auto .5rem;
+  margin: auto 0 auto .5rem;
   display: flex;
 }
 
@@ -1707,7 +1715,7 @@ figcaption {
   grid-column-gap: .625rem;
   grid-row-gap: .625rem;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   display: flex;
 }
 
@@ -2975,6 +2983,7 @@ figcaption {
 
 .heading-style-h5 {
   font-size: 1.25rem;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -3444,13 +3453,13 @@ figcaption {
 }
 
 .section_product {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .product_component {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
   flex-direction: column;
   grid-template-rows: auto;
   grid-template-columns: .5fr 1fr;
@@ -3653,6 +3662,7 @@ figcaption {
 }
 
 .nav_account {
+  min-height: 100%;
   padding-right: 1rem;
   display: flex;
 }
@@ -3957,7 +3967,7 @@ figcaption {
   grid-column-gap: 1.875rem;
   grid-row-gap: 1.875rem;
   flex-flow: column;
-  padding-top: 4rem;
+  padding-top: 3rem;
   display: flex;
   position: sticky;
   top: 0;
@@ -4210,6 +4220,7 @@ figcaption {
 }
 
 .link-block-4 {
+  opacity: .85;
   justify-content: flex-start;
   align-items: center;
   min-height: 100%;
@@ -4229,6 +4240,61 @@ figcaption {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.div-block-54 {
+  max-width: 20rem;
+}
+
+.div-block-55 {
+  background-color: var(--border-color--border-primary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.div-block-56 {
+  padding-top: 68%;
+}
+
+.div-block-57 {
+  border-radius: var(--border-radius--small);
+  background-color: var(--background-color--background-primary);
+  width: 100%;
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.div-block-58 {
+  flex-flow: column;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.hover-text {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hover-text.bottom {
+  position: absolute;
+  inset: auto 0% -100%;
+}
+
+.clip {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.div-block-59 {
+  max-width: 32rem;
 }
 
 @media screen and (max-width: 991px) {
