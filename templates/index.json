@@ -28,39 +28,12 @@
         "collection_collection": "frontpage",
         "collection_collection_limit": 6
       }
-    },
-    "links": {
-      "type": "links",
-      "settings": {
-        "text_headline": "Short heading here"
-      }
-    },
-    "content": {
-      "type": "content",
-      "settings": {
-        "text_headline": "Short heading here",
-        "text_button_text": "All Articles",
-        "url_button_link": "",
-        "url_artikel_1_link": "",
-        "text_artikel_1_titel": "Blog title heading will go here",
-        "text_artikel_1_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-        "article_artikel_2": "",
-        "url_artikel_2_link": "",
-        "text_artikel_2_titel": "Blog title heading will go here",
-        "text_artikel_2_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-        "article_artikel_3": "",
-        "url_artikel_3_link": "",
-        "text_artikel_3_titel": "Blog title heading will go here",
-        "text_artikel_3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "hero",
-    "category",
-    "links",
-    "content"
+    "category"
   ]
 }
