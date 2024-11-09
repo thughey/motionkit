@@ -1,7 +1,7 @@
 <div class="div-block"><div class="padding-horizontal padding-medium"><div class="header_card"><div class="div-block-59"><h1 class="heading-style-h1">
 {{ section.settings.text_headline }}
 </h1>
-</div><div class="div-block-2"><div class="text-size-medium"> {{ section.settings.richtext_text }} </div>
+</div><div class="div-block-2"><div class="text-size-medium text-style-muted"> {{ section.settings.richtext_text }} </div>
 <div class="button-group"><a href="{{ section.settings.url_button_link }}" class="button w-button"> {{ section.settings.text_button_text }} </a>
 </div></div></div></div><div id="w-node-cbddd000-c317-3536-1905-6757f4ff8e9d-39d4a541" class="div-block-3">{% assign product = all_products[section.settings.product_product] %} <script src="{{ 'liquify_custom.js' | asset_url }}" type="text/javascript"></script>
 <div li-element="product-variant-container" class="div-block-4" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" data-productid="{{ product.id }}" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)"><div class="div-block-5"></div><div class="div-block-6"><div class="div-block-7"><div li-object:text="product.title" class="heading-style-h4">
