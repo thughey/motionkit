@@ -4,7 +4,7 @@
 </div><div class="filter_scroll-wrapper"><div class="filter_filter-group-list">{% for filter in search.filters %}    <div li-for="filter in search.filters" class="filter_filter-group">
                                     
                             {% if filter.values.size > 1 %}    <div li-if="filter.values.size > 1">
-    <div class="filter_filter-group-heading"><div li-object="filter.label" class="text-size-medium text-weight-semibold">{{ filter.label }}</div></div><div class="filter_filter-options"><div class="filter_list-wrapper"><div class="filter_list">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="filter_item">
+    <div class="filter_filter-group-heading"><div li-object="filter.label" class="text-size-small text-weight-medium">{{ filter.label }}</div></div><div class="filter_filter-options"><div class="filter_list-wrapper"><div class="filter_list">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="filter_item">
                                     
                             <a href="{% if filter_value.active %}{{ filter_value.url_to_remove }}{% else %}{{ filter_value.url_to_add }}{% endif %}" class="{% if filter_value.count == 0 and filter_value.active == false %}filter_form_checkbox is-disabled{% else %}filter_form_checkbox{% endif %}"><div class="{% if filter_value.active %}filter_form_checkbox-icon is-checked{% else %}filter_form_checkbox-icon{% endif %}"></div><div class="filter_form_checkbox-label"><span li-object="filter_value.label | append: ' '">{{ filter_value.label | append: ' ' }}</span>(<span li-object="filter_value.count">{{ filter_value.count }}</span>)</div></a>
                             
