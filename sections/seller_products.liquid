@@ -1,5 +1,5 @@
 <div class="padding-horizontal padding-medium"><div li-="" class="container-large">{% paginate collection.products by 50 %}
-    <div li-paginate:by="50" li-paginate="collection.products" by="50"><div id="w-node-_98eb3193-38da-d576-fd03-0042a50ef0df-ccfb089e" class="div-block-60"><div id="w-node-fbc2b76f-ae1d-c44d-7b93-e3deb074d94a-ccfb089e" class="div-block-70"><div class="filter_feed-header"><select id="sort-by" li-for:inside="option in collection.sort_options" class="sort_select filter_checkbox">
+    <div li-paginate:by="50" li-paginate="collection.products" by="50"><div id="w-node-_98eb3193-38da-d576-fd03-0042a50ef0df-ccfb089e" class="div-block-60"><div id="w-node-fbc2b76f-ae1d-c44d-7b93-e3deb074d94a-ccfb089e" class="div-block-70"><div class="filter_feed-header right-side"><select id="sort-by" li-for:inside="option in collection.sort_options" class="sort_select filter_checkbox">
         {% for option in collection.sort_options %}                            
                             <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
                             
