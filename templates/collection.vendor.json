@@ -12,11 +12,18 @@
     "seller_products_qMjm3H": {
       "type": "seller_products",
       "settings": {}
+    },
+    "vendor_hero_TPdXNR": {
+      "type": "vendor_hero",
+      "settings": {
+        "product_product": ""
+      }
     }
   },
   "layout": "collection",
   "wrapper": "main.main-wrapper",
   "order": [
-    "seller_products_qMjm3H"
+    "seller_products_qMjm3H",
+    "vendor_hero_TPdXNR"
   ]
 }
