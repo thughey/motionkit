@@ -2651,10 +2651,14 @@ figcaption {
 }
 
 .filter_filters-wrapper {
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
   height: 100vh;
   max-height: 100vh;
   margin-top: -4rem;
   padding-top: 4rem;
+  display: flex;
   position: sticky;
   top: 0;
   overflow: clip;
@@ -4224,7 +4228,7 @@ figcaption {
   border-bottom-right-radius: var(--border-radius--small);
   width: 2.5rem;
   height: 2.5rem;
-  margin-left: -1.25rem;
+  margin-left: -1rem;
   transform: rotate(-45deg);
 }
 
@@ -4420,7 +4424,7 @@ figcaption {
   border-bottom: 1px solid var(--border-color--border-primary);
   flex-flow: column;
   justify-content: center;
-  height: 3.25rem;
+  height: 3rem;
   display: flex;
 }
 
@@ -4441,7 +4445,7 @@ figcaption {
 }
 
 .div-block-97 {
-  margin: 1rem;
+  margin: 1.5rem 1rem;
   overflow: clip;
 }
 
@@ -4474,7 +4478,7 @@ figcaption {
   border-bottom: 1px solid var(--border-color--border-primary);
   flex-flow: column;
   justify-content: center;
-  height: 3.25rem;
+  height: 3rem;
   margin-bottom: 2.5rem;
   display: flex;
   overflow: clip;
@@ -4486,6 +4490,28 @@ figcaption {
   justify-content: flex-start;
   align-items: center;
   display: flex;
+}
+
+.div-block-103 {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  flex-flow: column;
+  width: 100%;
+  min-width: 100%;
+  max-width: 12rem;
+  padding: 0;
+  display: flex;
+}
+
+.div-block-104 {
+  flex-flow: column;
+  display: flex;
+}
+
+.div-block-105 {
+  border-top: 1px solid var(--border-color--border-primary);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 991px) {
