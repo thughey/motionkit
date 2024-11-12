@@ -2,7 +2,7 @@
                                     
                             <div li-object:href="collection.url" class="collections_item" href="{{ collection.url }}"><a href="#" class="div-block-76 w-inline-block"><div class="collections_title"><div id="w-node-fe8ab936-1d63-7bf4-caf8-b880a3342887-39d4a59b" class="div-block-75"><img alt="" loading="lazy" li-object:src="collection.featured_image | img_url: 'master'" src="{{ collection.featured_image | img_url: 'master' }}" class="collections_bg-image">
 <div class="collections_overlay"></div></div><div class="div-block-85"><h2 li-object="collection.title" class="heading-style-h3">{{ collection.title }}</h2><div class="div-block-84 text-style-muted"><div class="text-size-small">13</div><div class="text-size-small"> Templates</div></div></div></div><div class="button is-blue"><div>View templates</div></div></a><div class="swiper-container is-collect">{% paginate collection.products by 2 %}
-    <div li-paginate:by="2" li-paginate="collection.products" class="div-block-78" by="2"><div class="swiper is-collect"><div class="swiper-wrapper">{% for product in collection.products %}    <div li-for="product in collection.products" class="swiper-slide is-collect">
+    <div li-paginate:by="2" li-paginate="collection.products" class="div-block-78" by="8"><div class="swiper is-collect"><div class="swiper-wrapper">{% for product in collection.products %}    <div li-for="product in collection.products" class="swiper-slide is-collect">
                                     
                             <div class="div-block-82"><img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="image-cover">
 </div>
