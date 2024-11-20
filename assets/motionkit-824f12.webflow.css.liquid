@@ -27,6 +27,7 @@
   --background-color--background-primary: var(--base-color-neutral--black);
   --background-color--background-success: var(--base-color-system--success-green);
   --text-color--text-success: var(--base-color-system--success-green-dark);
+  --link-color--link-secondary: var(--base-color-neutral--black);
   --base-color-brand--blue: #225df2;
   --link-color--link-alternate: var(--base-color-neutral--white);
   --base-color-brand--blue-light: #d9e5ff;
@@ -43,7 +44,6 @@
   --border-color--border-alternate: var(--base-color-neutral--neutral-darker);
   --border-radius--large: 1rem;
   --link-color--link-primary: var(--base-color-brand--blue);
-  --link-color--link-secondary: var(--base-color-neutral--black);
   --link-color--color: white;
 }
 
@@ -3694,13 +3694,16 @@ figcaption {
 
 .div-block-10 {
   z-index: 10;
-  color: var(--base-color-neutral--white);
+  color: var(--link-color--link-secondary);
+  padding: .4rem;
   position: absolute;
   inset: auto 0% 0%;
+  overflow: hidden;
 }
 
 .link-block-2 {
-  background-color: var(--background-color--background-secondary);
+  border-radius: var(--border-radius--small);
+  background-color: var(--background-color--background-alternate);
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -4040,6 +4043,7 @@ figcaption {
   flex-flow: column;
   width: 80%;
   display: flex;
+  position: relative;
 }
 
 .link-block-4 {
@@ -4517,6 +4521,37 @@ figcaption {
   border-top: 1px solid var(--border-color--border-primary);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.background-video {
+  z-index: 10;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.background-video-2 {
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.background-video-2.odd {
+  position: relative;
+}
+
+.div-block-106 {
+  z-index: 2;
+  position: absolute;
+  inset: 0%;
+}
+
+.div-block-107 {
+  border-radius: var(--border-radius--small);
+  padding-top: 120%;
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 991px) {
