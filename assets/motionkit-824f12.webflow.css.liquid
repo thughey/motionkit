@@ -1867,7 +1867,6 @@ figcaption {
 }
 
 .filter_product-list.odd {
-  border-bottom: 1px solid #000;
   margin-bottom: 4rem;
 }
 
@@ -2662,6 +2661,7 @@ figcaption {
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
+  min-width: 16.5rem;
   height: 100vh;
   max-height: 100vh;
   margin-top: -4rem;
@@ -4457,7 +4457,7 @@ figcaption {
 }
 
 .div-block-97 {
-  margin: 1rem 1.5rem 2rem;
+  margin: 1rem 1.5rem 3rem;
   overflow: clip;
 }
 
@@ -4514,7 +4514,11 @@ figcaption {
 }
 
 .div-block-104 {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
   flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   display: flex;
 }
 
@@ -4577,8 +4581,38 @@ figcaption {
 
 .div-block-111 {
   border-radius: var(--border-radius--small);
+  padding: 0;
+  overflow: hidden;
+}
+
+.div-block-112 {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  opacity: .65;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.div-block-113 {
   background-color: var(--border-color--border-primary);
-  padding: 1.5rem;
+  padding-top: 120%;
+}
+
+.div-block-114 {
+  background-color: var(--border-color--border-primary);
+  border-top: 1px solid #fff;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.875rem;
+  padding: .625rem 1.25rem;
+  display: flex;
+}
+
+.div-block-115 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
@@ -6098,7 +6132,15 @@ figcaption {
   align-self: stretch;
 }
 
-#w-node-_98eb3193-38da-d576-fd03-0042a50ef0df-39d4a596, #w-node-_678e0483-bbe4-e79a-1722-b169c587feae-c587feae, #w-node-_265c4342-3d21-e8bf-dfee-efec035c3507-c587feae {
+#w-node-_98eb3193-38da-d576-fd03-0042a50ef0df-39d4a596 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-_202595b4-63ab-2178-d5ff-102f49b2a528-39d4a596 {
+  align-self: start;
+}
+
+#w-node-_678e0483-bbe4-e79a-1722-b169c587feae-c587feae, #w-node-_265c4342-3d21-e8bf-dfee-efec035c3507-c587feae {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
