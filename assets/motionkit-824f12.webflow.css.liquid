@@ -689,7 +689,7 @@ figcaption {
 }
 
 .button.is-secondary {
-  border: 1px solid var(--base-color-neutral--black);
+  border: 1px solid var(--base-color-neutral--neutral-lighter);
   color: #000;
   background-color: #0000;
 }
@@ -1610,6 +1610,7 @@ figcaption {
 }
 
 .product-item_tag_list {
+  z-index: 3;
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
   flex-wrap: wrap;
@@ -4552,6 +4553,13 @@ figcaption {
   padding-top: 120%;
   position: relative;
   overflow: hidden;
+}
+
+.div-block-108 {
+  z-index: 2;
+  background-color: #0000;
+  position: absolute;
+  inset: 0%;
 }
 
 @media screen and (max-width: 991px) {
