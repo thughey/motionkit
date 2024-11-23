@@ -13,7 +13,7 @@
 {{ link.object.title }}
 </div><div class="div-block-110"><div li-object:text="link.object.all_products_count" class="text-size-tiny text-color-grey">
 {{ link.object.all_products_count }}
-</div><div class="text-size-tiny text-color-grey"> templates</div></div></div>
+</div><div class="text-size-tiny text-color-grey"> reels</div></div></div>
                             
                         </div>
 {% endfor %}</div></div></div><div class="div-block-96 top-border"><div class="div-block-94"><div class="padding-horizontal padding-medium"><div class="div-block-95"><div class="text-size-small text-style-muted">Featured</div><div class="icon-1x1-small"></div></div></div></div><div class="div-block-97"><div class="div-block-119">{% for link in linklists['promoted'].links %}    <div li-for="link in linklists['promoted'].links" class="div-block-118">
@@ -50,7 +50,7 @@ on every order</div><div class="div-block-112"><div class="text-size-small">Lear
                             <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
                             
                     {% endfor %}    </select>
-</div><div class="filter_product-list-wrapper"><div class="filter_product-list odd"><div id="w-node-_202595b4-63ab-2178-d5ff-102f49b2a528-39d4a596" class="div-block-111"><div class="div-block-113"><div class="div-block-120"><div class="div-block-121"></div><div class="div-block-122"><div class="text-size-small text-weight-medium">Save time </div><div class="text-size-small text-style-muted">Lorem ipsum dolor sit amet, consectetur adipiscing el.</div></div></div></div><div class="div-block-114"><div class="text-size-small">Learn more</div></div></div>{% for product in collection.products %}    <div li-for="product in collection.products" class="filter_product-list-item">
+</div><div class="filter_product-list-wrapper"><div class="filter_product-list odd">{% for product in collection.products %}    <div li-for="product in collection.products" class="filter_product-list-item">
                                     
                             {% render 'product_item', product: product %}
 
@@ -81,5 +81,5 @@ on every order</div><div class="div-block-112"><div class="text-size-small">Lear
 {% endif %}{% if paginate.next %}    <li li-if="paginate.next" class="pagination_item">
     <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon w-inline-block"><div>Next</div><div class="pagination_arrow is-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div></a>    </li>
 {% endif %}</ul>    </nav>
-{% endif %}</div></div></div></div>{% endpaginate %}
+{% endif %}</div></div><div class="div-block-123"><div class="padding-horizontal padding-medium"><div></div><div class="div-block-124"></div></div></div></div></div>{% endpaginate %}
 </div> {% schema %} {"tag":"section","name":"collection_products","class":"section_filters","presets":[{"name":"collection_products","category":"Liquify"}]} {% endschema %}
