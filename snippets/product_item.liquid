@@ -4,7 +4,7 @@
 {% endif %}<a li-object:href="product.url" href="{{ product.url }}" class="product-item_image-wrapper w-inline-block"><img li-object:alt="product.featured_image.alt" loading="lazy" li-object:src="product.featured_image | img_url: 'master'" src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}" class="product-item_image">
 <div data-poster-url="../videos/02_Grid_1080x1350new-poster-00001.jpg" data-video-urls="../videos/02_Grid_1080x1350new-transcode.mp4,../videos/02_Grid_1080x1350new-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video-2 w-background-video w-background-video-atom"><video id="5c3a322b-94b9-d7b6-b6ca-81f455fb342b-video" autoplay="" loop="" style="background-image:url("../videos/02_Grid_1080x1350new-poster-00001.jpg")" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="{{ '02_Grid_1080x1350new-transcode.mp4' | asset_url }}" data-wf-ignore="true">
 <source src="{{ '02_Grid_1080x1350new-transcode.webm' | asset_url }}" data-wf-ignore="true">
-</video></div><div class="div-block-108"></div></a><div class="product-item_tag_list">{% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
+</video></div></a><div class="product-item_tag_list">{% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
     Not in Stock    </div>
 {% endif %}{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag">
     Sale    </div>
