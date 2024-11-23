@@ -50,7 +50,7 @@ on every order</div></div></div></div></div></div></div></div><a data-w-id="fbc2
                             <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
                             
                     {% endfor %}    </select>
-</div><div class="filter_product-list odd">{% for product in collection.products %}    <div li-for="product in collection.products" class="filter_product-list-item">
+</div><div class="filter_product-list odd"><div id="w-node-_202595b4-63ab-2178-d5ff-102f49b2a528-39d4a596" class="div-block-111"></div>{% for product in collection.products %}    <div li-for="product in collection.products" class="filter_product-list-item">
                                     
                             {% render 'product_item', product: product %}
 
