@@ -30,12 +30,12 @@
   --link-color--link-secondary: var(--base-color-neutral--black);
   --base-color-brand--blue: #225df2;
   --link-color--link-alternate: var(--base-color-neutral--white);
+  --base-color-neutral--neutral-light: #aaa;
   --base-color-brand--blue-light: #d9e5ff;
   --base-color-brand--blue-dark: #080331;
   --base-color-brand--pink-light: #ffaefe;
   --base-color-brand--pink: #dd23bb;
   --base-color-brand--pink-dark: #3c043b;
-  --base-color-neutral--neutral-light: #aaa;
   --base-color-neutral--neutral-dark: #444;
   --base-color-neutral--neutral-darkest: #111;
   --base-color-system--success-green: #cef5ca;
@@ -1984,6 +1984,10 @@ figcaption {
   display: flex;
 }
 
+.swiper-slide.is-promo {
+  width: 100%;
+}
+
 .swiper_button-wrapper {
   grid-column-gap: .75rem;
   grid-row-gap: .75rem;
@@ -2662,6 +2666,7 @@ figcaption {
   justify-content: space-between;
   align-items: stretch;
   min-width: 16.5rem;
+  max-width: 20rem;
   height: 100vh;
   max-height: 100vh;
   margin-top: -4rem;
@@ -2669,7 +2674,7 @@ figcaption {
   display: flex;
   position: sticky;
   top: 0;
-  overflow: clip;
+  overflow: hidden;
 }
 
 .filter_form_component {
@@ -4132,7 +4137,7 @@ figcaption {
 
 .div-block-60 {
   flex-flow: column;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   display: flex;
 }
 
@@ -4433,10 +4438,10 @@ figcaption {
 }
 
 .div-block-94 {
-  border-bottom: 1px solid var(--border-color--border-primary);
+  border-bottom: 1px none var(--border-color--border-primary);
   flex-flow: column;
   justify-content: center;
-  height: 3rem;
+  padding-top: 1.25rem;
   display: flex;
 }
 
@@ -4457,7 +4462,7 @@ figcaption {
 }
 
 .div-block-97 {
-  margin: 1rem 1.5rem 3rem;
+  margin: .7rem 1.5rem 3rem;
   overflow: clip;
 }
 
@@ -4519,13 +4524,15 @@ figcaption {
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-bottom: 1.5rem;
   display: flex;
 }
 
 .div-block-105 {
   border-top: 1px solid var(--border-color--border-primary);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  cursor: pointer;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .background-video {
@@ -4611,6 +4618,21 @@ figcaption {
 
 .div-block-115 {
   justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.div-block-116 {
+  background-color: var(--base-color-neutral--neutral-light);
+  border-radius: 100rem;
+  width: .4rem;
+  height: .4rem;
+}
+
+.div-block-117 {
+  grid-column-gap: .625rem;
+  grid-row-gap: .625rem;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
 }
