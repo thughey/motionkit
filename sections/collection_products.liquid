@@ -16,7 +16,7 @@
 </div><div class="text-size-tiny text-color-grey"> templates</div></div></div>
                             
                         </div>
-{% endfor %}</div></div></div><div class="div-block-96 top-border"><div class="div-block-94"><div class="padding-horizontal padding-medium"><div class="div-block-95"><div class="text-size-small text-style-muted">Featured</div><div class="icon-1x1-small"></div></div></div></div><div class="div-block-97"><div class="div-block-91">{% for link in linklists['creators'].links %}    <div li-for="link in linklists['creators'].links" class="div-block-92">
+{% endfor %}</div></div></div><div class="div-block-96 top-border"><div class="div-block-94"><div class="padding-horizontal padding-medium"><div class="div-block-95"><div class="text-size-small text-style-muted">Featured</div><div class="icon-1x1-small"></div></div></div></div><div class="div-block-97"><div class="div-block-91">{% for link in linklists['promoted'].links %}    <div li-for="link in linklists['promoted'].links" class="div-block-92">
                                     
                             <div class="div-block-100"></div>
                             
@@ -50,19 +50,13 @@ on every order</div></div></div></div></div></div></div></div><a data-w-id="fbc2
                             <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
                             
                     {% endfor %}    </select>
-</div><div class="filter_product-list odd"><div id="w-node-_202595b4-63ab-2178-d5ff-102f49b2a528-39d4a596" class="div-block-111"></div>{% for product in collection.products %}    <div li-for="product in collection.products" class="filter_product-list-item">
+</div><div class="filter_product-list-wrapper"><div class="filter_product-list odd"><div id="w-node-_202595b4-63ab-2178-d5ff-102f49b2a528-39d4a596" class="div-block-111"><div></div></div>{% for product in collection.products %}    <div li-for="product in collection.products" class="filter_product-list-item">
                                     
                             {% render 'product_item', product: product %}
 
                             
                         </div>
-{% endfor %}</div><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="filter_product-list-item w-dyn-item">
-                                    
-                            {% render 'product_item', product: product %}
-
-                            
-                        </div>
-{% endfor %}</div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="filter_empty w-dyn-empty">
+{% endfor %}</div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="filter_empty">
     <div class="heading-style-h6">No results found.</div><div class="spacer-xxsmall"></div><div>There are no results with this criteria. Try changing your search.</div>    </div>
 {% endif %}</div>{% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">
     <ul role="list" class="pagination_list w-list-unstyled">{% if paginate.previous %}    <li li-if="paginate.previous" class="pagination_item">
