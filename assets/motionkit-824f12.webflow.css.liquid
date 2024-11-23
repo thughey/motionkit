@@ -549,7 +549,7 @@ figcaption {
 }
 
 .text-style-muted {
-  opacity: .6;
+  opacity: .8;
 }
 
 .text-size-small {
@@ -2665,8 +2665,7 @@ figcaption {
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
-  min-width: 16.5rem;
-  max-width: 20rem;
+  min-width: 18rem;
   height: 100vh;
   max-height: 100vh;
   margin-top: -4rem;
@@ -2674,7 +2673,7 @@ figcaption {
   display: flex;
   position: sticky;
   top: 0;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .filter_form_component {
@@ -4413,19 +4412,23 @@ figcaption {
   grid-row-gap: 0rem;
   flex-flow: column;
   grid-template-rows: auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
+  margin-bottom: -1px;
+  margin-right: -1px;
   display: grid;
 }
 
 .div-block-92 {
   grid-column-gap: .625rem;
   grid-row-gap: .625rem;
-  border-bottom: 1px none var(--border-color--border-primary);
-  flex-flow: row;
-  justify-content: flex-start;
+  border-right: 1px dashed var(--border-color--border-primary);
+  border-bottom: 1px dashed var(--border-color--border-primary);
+  cursor: pointer;
+  flex-flow: column;
+  justify-content: center;
   align-items: center;
-  padding: .5rem 1.5rem .5rem .5rem;
+  padding: 1.5rem 1rem;
   display: flex;
 }
 
@@ -4438,10 +4441,11 @@ figcaption {
 }
 
 .div-block-94 {
-  border-bottom: 1px none var(--border-color--border-primary);
+  border-bottom: 1px solid var(--border-color--border-primary);
   flex-flow: column;
   justify-content: center;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
 }
 
@@ -4462,7 +4466,7 @@ figcaption {
 }
 
 .div-block-97 {
-  margin: .7rem 1.5rem 3rem;
+  margin: 1.5rem;
   overflow: clip;
 }
 
@@ -4513,7 +4517,6 @@ figcaption {
   flex-flow: column;
   width: 100%;
   min-width: 100%;
-  max-width: 12rem;
   padding: 0;
   display: flex;
 }
@@ -4533,6 +4536,8 @@ figcaption {
   cursor: pointer;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  position: sticky;
+  bottom: 0;
 }
 
 .background-video {
@@ -4604,6 +4609,7 @@ figcaption {
 .div-block-113 {
   background-color: var(--border-color--border-primary);
   padding-top: 120%;
+  position: relative;
 }
 
 .div-block-114 {
@@ -4634,6 +4640,45 @@ figcaption {
   grid-row-gap: .625rem;
   justify-content: flex-start;
   align-items: center;
+  display: flex;
+}
+
+.div-block-118 {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .5rem;
+  display: flex;
+}
+
+.div-block-119 {
+  flex-flow: column;
+  display: flex;
+}
+
+.div-block-120 {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  flex-flow: column;
+  padding: 1.25rem;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.div-block-121 {
+  flex: 1;
+}
+
+.div-block-122 {
+  grid-column-gap: .2rem;
+  grid-row-gap: .2rem;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 12rem;
   display: flex;
 }
 
