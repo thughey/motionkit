@@ -4,15 +4,23 @@
                             <div class="div-block-93"><img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="image-cover">
 </div>
                             
-                            <div li-object:text="link.object.title" class="text-size-small">
+                            <div class="div-block-109"><div li-object:text="link.object.title" class="text-size-small">
 {{ link.object.title }}
-</div>
+</div><div class="div-block-110"><div li-object:text="link.object.all_products_count" class="text-size-tiny text-color-grey">
+{{ link.object.all_products_count }}
+</div><div class="text-size-tiny text-color-grey"> templates</div></div></div>
                             
                         </div>
-{% endfor %}</div></div><div class="w-embed"></div>
-</div><div class="div-block-96 top-border"><div class="div-block-94"><div class="padding-horizontal padding-medium"><div class="div-block-95"><div class="text-size-small text-style-muted">Featured</div><div class="icon-1x1-small"></div></div></div></div><div class="div-block-98"><div class="div-block-99"><div class="div-block-100"></div><div stylee="" class="text-size-small">Best sellers</div></div><div class="div-block-99"><div class="div-block-100"></div><div class="text-size-small">Staff picks</div></div><div class="div-block-99"><div class="div-block-100"></div><div class="text-size-small">On sale</div></div></div></div><div class="padding-horizontal padding-medium"><div class="filter_form-field-wrapper hide"><input name="type" type="hidden" class="form_input" value="product">
-<label for="filter-search" class="form_hidden-label">Search for Products</label><input name="q" placeholder="Search" type="search" id="filter-search" class="form_input" value="{{ search.terms | escape }}">
-</div></div></div></form><a data-w-id="678e0483-bbe4-e79a-1722-b169c587fede" href="#" class="filter_tablet-modal-close-button w-inline-block"><img src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031623afe4aee7e_icon_close-modal.svg" alt="" class="icon-1x1-small">
+{% endfor %}</div></div></div><div class="div-block-96 top-border"><div class="div-block-94"><div class="padding-horizontal padding-medium"><div class="div-block-95"><div class="text-size-small text-style-muted">Featured</div><div class="icon-1x1-small"></div></div></div></div><div class="div-block-97"><div class="div-block-91">{% for link in linklists['creators'].links %}    <div li-for="link in linklists['creators'].links" class="div-block-92">
+                                    
+                            <div class="div-block-100"></div>
+                            
+                            <div class="div-block-109"><div li-object:text="link.object.title" class="text-size-small">
+{{ link.object.title }}
+</div></div>
+                            
+                        </div>
+{% endfor %}</div></div></div></div></form><a data-w-id="678e0483-bbe4-e79a-1722-b169c587fede" href="#" class="filter_tablet-modal-close-button w-inline-block"><img src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031623afe4aee7e_icon_close-modal.svg" alt="" class="icon-1x1-small">
 </a><div class="div-block-105"><div class="padding-horizontal padding-medium"><div class="div-block-103"><div class="div-block-104"><div class="text-size-regular">Get 15% credit back<br>
 on every order</div></div></div></div></div></div><a data-w-id="18b99dbe-6ff4-693a-5d15-824c10ee554b" href="#" class="filter_tablet-filters-button w-inline-block"><img alt="" loading="lazy" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/62942b9f00484cf074e6f851_icon-filters.svg" class="button-icon-left">
 <div>Filters</div></a><div id="w-node-_18b99dbe-6ff4-693a-5d15-824c10ee554f-39d4a5b7" class="filter_feed"><div class="filter_feed-header"><div class="filter_tags-wrapper">{% for filters in search.filters %}    <div li-for="filters in search.filters" class="filter_tags-inner-wrapper">
