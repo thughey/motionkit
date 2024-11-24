@@ -16,12 +16,13 @@
   --base-color-neutral--neutral-lightest: #eee;
   --background-color--background-alternate: var(--base-color-neutral--white);
   --accessible-components-dark-grey\<deleted\|variable-c4d8099c\>: #9b9b9b;
+  --base-color-neutral--neutral-light: #aaa;
+  --text-color--text-primary: var(--base-color-neutral--black);
   --text-color--text-error: var(--base-color-system--error-red-dark);
   --base-color-system--success-green-dark: #17660f;
   --base-color-system--error-red: #f8e4e4;
   --base-color-system--error-red-dark: #9b1313;
   --background-color--background-error: var(--base-color-system--error-red);
-  --text-color--text-primary: var(--base-color-neutral--black);
   --background-color--background-warning: var(--base-color-system--warning-yellow);
   --text-color--text-warning: var(--base-color-system--warning-yellow-dark);
   --background-color--background-primary: var(--base-color-neutral--black);
@@ -30,7 +31,6 @@
   --link-color--link-secondary: var(--base-color-neutral--black);
   --base-color-brand--blue: #225df2;
   --link-color--link-alternate: var(--base-color-neutral--white);
-  --base-color-neutral--neutral-light: #aaa;
   --base-color-brand--blue-light: #d9e5ff;
   --base-color-brand--blue-dark: #080331;
   --base-color-brand--pink-light: #ffaefe;
@@ -1985,6 +1985,17 @@ figcaption {
 .swiper-slide.is-promo {
   width: 100%;
   max-width: 19rem;
+}
+
+.swiper-slide.is-promo-thumb {
+  background-color: var(--base-color-neutral--neutral-light);
+  border-radius: 100rem;
+  width: .4rem;
+  height: .4rem;
+}
+
+.swiper-slide.is-promo-thumb.is-active {
+  background-color: var(--text-color--text-primary);
 }
 
 .swiper_button-wrapper {
@@ -4402,6 +4413,7 @@ figcaption {
 }
 
 .div-block-93 {
+  z-index: 10;
   border-radius: var(--border-radius--small);
   width: 2.1rem;
   height: 2.1rem;
@@ -4470,6 +4482,7 @@ figcaption {
 .div-block-104 {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
+  cursor: pointer;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -4479,7 +4492,6 @@ figcaption {
 
 .div-block-105 {
   border-top: 1px solid var(--border-color--border-primary);
-  cursor: pointer;
   padding-top: 2rem;
   padding-bottom: 2rem;
   position: sticky;
@@ -4509,10 +4521,13 @@ figcaption {
 }
 
 .div-block-109 {
+  z-index: 10;
+  color: var(--link-color--link-secondary);
   flex-flow: column;
   justify-content: center;
   align-items: center;
   display: flex;
+  position: relative;
 }
 
 .div-block-110 {
@@ -4714,13 +4729,50 @@ figcaption {
 .div-block-141 {
   grid-column-gap: .625rem;
   grid-row-gap: .625rem;
+  color: #fff0;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
+  position: relative;
+}
+
+.div-block-141.w--current {
+  color: var(--border-color--border-primary);
+}
+
+.div-block-142 {
+  padding-top: 3rem;
+}
+
+.div-block-143 {
+  border-bottom: 1px solid var(--border-color--border-primary);
+  flex-flow: column;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+.div-block-144 {
+  justify-content: flex-start;
+  align-items: center;
+  height: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.div-block-145 {
+  border-top-left-radius: var(--border-radius--small);
+  border-top-right-radius: var(--border-radius--small);
+  border-bottom-left-radius: var(--border-radius--small);
+  border-bottom-right-radius: var(--border-radius--small);
+  background-color: currentColor;
+  margin: .5rem;
+  position: absolute;
+  inset: 0%;
 }
 
 @media screen and (max-width: 991px) {
