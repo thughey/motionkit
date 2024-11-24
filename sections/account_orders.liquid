@@ -3,19 +3,25 @@
 {% endif %}{% if customer.orders.size == 0 %}    <div li-if="customer.orders.size == 0" class="account_single-cart-wrapper">
     <div>No orders yet.</div><a href="{{ routes.root_url }}" li-object:href="routes.root_url" id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d1-39d4a579" class="button w-button">Shop now</a>    </div>
 {% endif %}</div></div><div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d3-39d4a579" class="cart_table outline-solid-1"><div class="cart_grid is-header"><div item="total" id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d5-39d4a579" class="text-size-regular">Customer Information</div><div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d7-39d4a579" class="cart_table-header"><a li-object:href="routes.account_logout_url" href="{{ routes.account_logout_url }}" class="text-size-regular text-style-link">Logout</a></div></div><div class="addresses_account-wrapper"><div class="customer-name"><div li-object="customer.first_name" class="customer-name">{{ customer.first_name }}</div><div li-object="customer.last_name">{{ customer.last_name }}</div></div><div li-object="customer.email">{{ customer.email }}</div><address class="addresses_wrapper-default"><div li-object="customer.default_address | format_address">{{ customer.default_address | format_address }}</div></address><a href="{{ routes.account_addresses_url }}" li-object:href="routes.account_addresses_url" class="button w-button">Add Address</a></div></div>{% if customer.orders.size != 0 %}    <div li-if="customer.orders.size != 0" id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb7f-39d4a579" class="cart_grid-wrapper">
-    <div id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb80-39d4a579" class="cart_table outline-solid-1"><div class="cart_grid is-header hide-mobil"><div class="cart_table-header"><div class="text-size-small">Order Nr.</div></div><div class="cart_table-header"><div item="date" class="text-size-small">Date</div></div><div class="cart_table-header"><div item="payment-status" class="text-size-small">Payment Status</div></div><div class="cart_table-header"><div item="fulfillment-status" class="text-size-small">Delivery Status</div></div><div class="cart_table-header"><div item="total" class="text-size-small">Sum</div></div></div>{% for order in customer.orders %}    <div li-for="order in customer.orders">
+    <div id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb80-39d4a579" class="cart_table outline-solid-1"><div class="cart_grid is-product is-guide"><div class="cart_table-header"><div class="text-size-small">Preview</div></div><div id="w-node-ee54d099-3857-add6-c547-62448bd6fddc-39d4a579" class="cart_table-header"><div class="text-size-small">Product</div></div><div id="w-node-_92356b39-220a-db70-bea9-d801a18f3bf7-39d4a579" class="cart_table-header"><div class="text-size-small">Order date</div></div><div id="w-node-ece828fc-bfc9-db8e-b922-682bc700e6db-39d4a579" class="cart_table-header"><div class="text-size-small">Actions</div></div></div>{% for order in customer.orders %}    <div li-for="order in customer.orders">
                                     
-                            {% for line_item in order.line_items %}    <div li-for="line_item in order.line_items" class="cart_grid">
+                            {% for line_item in order.line_items %}    <div li-for="line_item in order.line_items" class="cart_grid is-product">
                                     
-                            <a li-object:href="order.customer_url" id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb92-39d4a579" href="{{ order.customer_url }}" class="text-size-regular text-style-link text-weight-bold w-inline-block"><div li-object="order.name">{{ order.name }}</div></a>
+                            <div id="w-node-_1b3c8ee3-3b46-2f55-303c-e3e7d64ddd5f-39d4a579" class="div-block-147"><div id="w-node-b5964933-7e02-1689-8149-e0387bddb215-39d4a579" class="div-block-146"><img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="image-cover">
+</div></div>
                             
-                            <div li-object="order.created_at | date: '%e.%m.%Y'" id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb95-39d4a579" class="text-size-regular">{{ order.created_at | date: '%e.%m.%Y' }}</div>
+                            {% for link in linklists['creators'].links %}    <div li-for="link in linklists['creators'].links" id="w-node-_2b188ebf-fb89-7447-6b87-1066f7ee31b9-39d4a579" class="div-block-150">
+                                    
+                            <div class="text-size-regular text-weight-medium">Product name</div>
                             
-                            <div li-object="order.financial_status_label" class="text-size-regular">{{ order.financial_status_label }}</div>
+                            <div class="text-size-small text-color-grey">View order</div>
                             
-                            <div li-object="order.fulfillment_status_label" id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb99-39d4a579" class="text-size-regular">{{ order.fulfillment_status_label }}</div>
+                        </div>
+{% endfor %}
                             
-                            <div li-object="order.total_price | money" id="w-node-a51bc4af-d3bd-1d11-ec0e-9a869485bb9b-39d4a579" class="text-size-regular">{{ order.total_price | money }}</div>
+                            <div id="w-node-_27abc046-a88c-5d2c-539a-f5a2b63a02a0-39d4a579" class="text-size-small text-color-grey">June 30, 2019</div>
+                            
+                            <div id="w-node-_362dc685-9c93-8416-0c16-055f13b055e3-39d4a579" class="div-block-148"><a href="#" class="div-block-149 w-inline-block"></a><a href="#" class="div-block-149 w-inline-block"></a><a href="#" class="div-block-149 end w-inline-block"></a></div>
                             
                         </div>
 {% endfor %}
