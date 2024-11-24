@@ -1,4 +1,4 @@
-<div class="headline-wrapper"><h2 class="heading-style-h3">
+<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="product-recommendations"><div class="headline-wrapper"><h2 class="heading-style-h3">
 {{ section.settings.text_headline }}
 </h2>
 </div><div class="product_list-wrapper"><ul role="list" class="list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="product_list-item">
@@ -7,4 +7,4 @@
 
                             
                         </li>
-{% endfor %}</ul></div> {% schema %} {"tag":"div","name":"Product-Recommended","class":"div-block-45","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Recommended"}],"presets":[{"name":"Product-Recommended","category":"Liquify"}]} {% endschema %}
+{% endfor %}</ul></div></div> {% schema %} {"tag":"div","name":"Product-Recommended","class":"div-block-45","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Recommended"}],"presets":[{"name":"Product-Recommended","category":"Liquify"}]} {% endschema %}
