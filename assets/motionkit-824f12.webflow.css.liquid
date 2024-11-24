@@ -4394,10 +4394,10 @@ figcaption {
   border-bottom: 1px dashed var(--border-color--border-primary);
   text-align: center;
   cursor: pointer;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: center;
-  align-items: center;
-  padding: 1.4rem 1rem;
+  align-items: stretch;
+  padding: 0;
   display: flex;
 }
 
@@ -4708,6 +4708,18 @@ figcaption {
   align-items: center;
   width: 1.5rem;
   height: 1.5rem;
+  display: flex;
+}
+
+.div-block-141 {
+  grid-column-gap: .625rem;
+  grid-row-gap: .625rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
 }
 
