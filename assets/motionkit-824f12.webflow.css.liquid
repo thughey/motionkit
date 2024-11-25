@@ -1178,14 +1178,18 @@ figcaption {
 
 .section_account-nav {
   border-right: 1px solid var(--border-color--border-primary);
-  width: 16rem;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 13rem;
   height: 100vh;
   max-height: 100vh;
   margin-top: -4rem;
   padding-top: 4rem;
+  display: flex;
   position: sticky;
   top: 0;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .account-tabs_wrapper {
@@ -2112,6 +2116,10 @@ figcaption {
   grid-auto-columns: 1fr;
   place-items: stretch stretch;
   display: grid;
+}
+
+.product_list.three-column {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .text-color-red {
@@ -4632,8 +4640,8 @@ figcaption {
 }
 
 .div-block-133 {
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
   flex-flow: column;
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -4748,7 +4756,10 @@ figcaption {
 
 .div-block-149 {
   border-right: 1px solid var(--border-color--border-primary);
+  justify-content: center;
+  align-items: center;
   height: 2.5rem;
+  display: flex;
 }
 
 .div-block-149.end {
@@ -4786,14 +4797,23 @@ figcaption {
 
 .div-block-154 {
   grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 2fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
 }
 
 .div-block-155 {
   border-left: 1px solid var(--border-color--border-primary);
-  width: 22rem;
+  background-color: #fff;
+  flex-flow: column;
+  min-width: 20rem;
+  max-height: 100vh;
+  margin-top: -4rem;
+  padding-top: 4rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 
 .product-item_text-link-2 {
@@ -4896,6 +4916,8 @@ figcaption {
 
 .section_product-recommended {
   border-top: 1px solid #eee;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
   position: relative;
   overflow: hidden;
 }
@@ -4946,6 +4968,95 @@ figcaption {
   align-items: center;
   margin-bottom: 2rem;
   display: flex;
+}
+
+.code-embed {
+  justify-content: center;
+  align-items: center;
+  width: .85rem;
+  height: .85rem;
+  display: flex;
+}
+
+.div-block-156 {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  flex-flow: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.div-block-157 {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--border-color--border-primary);
+  border-radius: var(--border-radius--small);
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+}
+
+.div-block-158 {
+  padding-top: 20%;
+}
+
+.div-block-159 {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.div-block-160 {
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.div-block-161 {
+  background-color: var(--border-color--border-primary);
+  border-radius: 100rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.div-block-162 {
+  border: 1px solid var(--border-color--border-primary);
+  border-radius: var(--border-radius--small);
+  flex-flow: column;
+  display: flex;
+  overflow: auto;
+}
+
+.div-block-163 {
+  border-bottom: 1px solid var(--border-color--border-primary);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -1px;
+  padding: 1rem;
+  display: flex;
+}
+
+.div-block-164 {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  flex-flow: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.div-block-165 {
+  border-top: 1px solid var(--border-color--border-primary);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: sticky;
+  bottom: 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -6333,7 +6444,7 @@ figcaption {
 }
 
 #w-node-_1b2d8ad4-a4c3-d245-360a-14e77e4e8ff4-39d4a579 {
-  grid-area: 1 / 1 / 2 / 3;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 #w-node-aa708b66-30e1-8d40-41a3-a18b79d7399f-39d4a579 {
@@ -6368,7 +6479,11 @@ figcaption {
   place-self: center start;
 }
 
-#w-node-c9b166fb-8c43-7935-4f21-ea2c59783d8a-39d4a579, #w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7d9-c04fc7ce, #w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7dd-c04fc7ce {
+#w-node-c9b166fb-8c43-7935-4f21-ea2c59783d8a-39d4a579 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+#w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7d9-c04fc7ce, #w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7dd-c04fc7ce {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
