@@ -825,7 +825,7 @@ figcaption {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   grid-template-rows: auto;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr;
   grid-auto-columns: 1fr;
   display: grid;
 }
@@ -1188,8 +1188,6 @@ figcaption {
   width: 13rem;
   height: 100vh;
   max-height: 100vh;
-  margin-top: -4rem;
-  padding-top: 4rem;
   display: flex;
   position: sticky;
   top: 4rem;
@@ -4700,6 +4698,8 @@ figcaption {
   padding-top: 2rem;
   padding-bottom: 4rem;
   display: flex;
+  position: sticky;
+  top: 0;
 }
 
 .div-block-134 {
@@ -5202,6 +5202,41 @@ figcaption {
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: grid;
+}
+
+.div-block-177 {
+  border: 1px solid var(--border-color--border-primary);
+  border-radius: var(--border-radius--small);
+  min-width: 100%;
+}
+
+.div-block-178 {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-flow: column;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: flex;
+}
+
+.div-block-179 {
+  align-self: stretch;
+  width: 100%;
+}
+
+.div-block-180 {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  padding: 1rem 1.5rem;
+  display: grid;
+}
+
+.div-block-180.guide {
+  border-bottom: 1px solid var(--border-color--border-primary);
+  color: #0000008c;
 }
 
 @media screen and (max-width: 991px) {
@@ -6784,6 +6819,14 @@ figcaption {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
+#w-node-_0125fe1a-fc7b-3665-3442-d61692129d80-39d4a5b0 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#w-node-_0125fe1a-fc7b-3665-3442-d61692129d86-39d4a5b0 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
 #w-node-bcd6f150-7844-1b66-d054-ab3db8f0208e-39d4a5b0 {
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
@@ -6807,6 +6850,10 @@ figcaption {
 #w-node-bcd6f150-7844-1b66-d054-ab3db8f020bf-39d4a5b0 {
   grid-area: span 1 / span 5 / span 1 / span 5;
   justify-self: start;
+}
+
+#w-node-_0125fe1a-fc7b-3665-3442-d61692129dd2-39d4a5b0 {
+  grid-area: 1 / 2 / 3 / 3;
 }
 
 #w-node-_5576d616-789d-29ca-2839-5ac04923b886-39d4a5b4 {
