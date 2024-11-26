@@ -28,12 +28,21 @@
         "collection_collection": "frontpage",
         "collection_collection_limit": 4
       }
+    },
+    "home_features_hTDtJm": {
+      "type": "home_features",
+      "settings": {
+        "text_line_one": "Get 15% credit back",
+        "text_line_two": "Follow simple tutorials",
+        "text_line_three": "Use easy to edit files"
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "hero",
-    "category"
+    "category",
+    "home_features_hTDtJm"
   ]
 }
