@@ -1,0 +1,12 @@
+<div class="div-block-171"></div><div class="div-block-172"><div class="div-block-173"><div class="text-size-small">My order history</div></div><div class="div-block-174"><div class="div-block-175">{% for order in customer.orders %}    <div li-for="order in customer.orders" class="div-block-176">
+                                    
+                            <div li-object="order.name" id="w-node-_03d65e95-fb5e-1a62-ba2d-8db4e254c70c-39d4a579">{{ order.name }}</div>
+                            
+                            <div li-object="order.created_at | date: '%e.%m.%Y'" id="w-node-_03d65e95-fb5e-1a62-ba2d-8db4e254c70e-39d4a579">{{ order.created_at | date: '%e.%m.%Y' }}</div>
+                            
+                            <div li-object="order.total_price | money" id="w-node-_03d65e95-fb5e-1a62-ba2d-8db4e254c710-39d4a579">{{ order.total_price | money }}</div>
+                            
+                            <a li-object="order.customer_url" id="w-node-_03d65e95-fb5e-1a62-ba2d-8db4e254c712-39d4a579" href="#" class="button is-outline w-inline-block">{{ order.customer_url }}</a>
+                            
+                        </div>
+{% endfor %}</div></div></div> {% schema %} {"tag":"div","name":"Account-Modal","class":"div-block-170","presets":[{"name":"Account-Modal","category":"Liquify"}]} {% endschema %}
