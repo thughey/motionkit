@@ -1,7 +1,9 @@
 <div class="padding-horizontal padding-medium"><div class="container-large"><div class="div-block-166">{% for link in linklists['creators'].links %}    <div li-for="link in linklists['creators'].links" class="collections_item">
                                     
-                            <a href="#" class="div-block-76 w-inline-block"><div class="collections_title"><div id="w-node-_74f76bc6-2ac4-8606-4bdb-9ec2a0189caa-39d4a59b" class="div-block-75"><img alt="" loading="lazy" li-object:src="collection.featured_image | img_url: 'master'" src="{{ collection.featured_image | img_url: 'master' }}" class="collections_bg-image">
-<div class="collections_overlay"></div></div><div class="div-block-85"><h2 li-object="link.object.title" class="heading-style-h3">{{ link.object.title }}</h2><div class="div-block-84 text-style-muted"><div class="text-size-small">13</div><div class="text-size-small"> Templates</div></div></div></div><div class="button is-blue"><div>View templates</div></div></a>
+                            <a li-object:href="link.object.url" href="{{ link.object.url }}" class="div-block-76 w-inline-block"><div class="collections_title"><div id="w-node-_74f76bc6-2ac4-8606-4bdb-9ec2a0189caa-39d4a59b" class="div-block-75"><img alt="" loading="lazy" li-object:src="link.object.featured_image | img_url: 'master'" src="{{ link.object.featured_image | img_url: 'master' }}" class="collections_bg-image">
+<div class="collections_overlay"></div></div><div class="div-block-85"><h2 li-object="link.object.title" class="heading-style-h3">{{ link.object.title }}</h2><div class="div-block-84 text-style-muted"><div li-object:text="link.object.all_products_count" class="text-size-small">
+{{ link.object.all_products_count }}
+</div><div class="text-size-small"> Templates</div></div></div></div><div class="button is-blue"><div>View templates</div></div></a>
                             
                             <div class="swiper-container is-collect">{% paginate link.object.products by 2 %}
     <div li-paginate:by="2" li-paginate="link.object.products" class="div-block-78" by="2"><div class="swiper is-collect"><div class="swiper-wrapper">{% for product in link.object.products %}    <div li-for="product in link.object.products" class="swiper-slide is-collect">
@@ -18,22 +20,4 @@
 </div>
                             
                         </div>
-{% endfor %}</div><div id="w-node-ed5a3b26-04a6-4901-10b6-5e4206cce2c1-39d4a59b" class="collections_list-wrapper w-dyn-list"><div role="list" class="collections_grid w-dyn-items">{% for collection in collections %}    <div li-for="collection in collections" role="listitem" class="collections_list-item w-dyn-item">
-                                    
-                            <div li-object:href="collection.url" class="collections_item" href="{{ collection.url }}"><a href="#" class="div-block-76 w-inline-block"><div class="collections_title"><div id="w-node-fe8ab936-1d63-7bf4-caf8-b880a3342887-39d4a59b" class="div-block-75"><img alt="" loading="lazy" li-object:src="collection.featured_image | img_url: 'master'" src="{{ collection.featured_image | img_url: 'master' }}" class="collections_bg-image">
-<div class="collections_overlay"></div></div><div class="div-block-85"><h2 li-object="collection.title" class="heading-style-h3">{{ collection.title }}</h2><div class="div-block-84 text-style-muted"><div class="text-size-small">13</div><div class="text-size-small"> Templates</div></div></div></div><div class="button is-blue"><div>View templates</div></div></a><div class="swiper-container is-collect">{% paginate collection.products by 2 %}
-    <div li-paginate:by="2" li-paginate="collection.products" class="div-block-78" by="2"><div class="swiper is-collect"><div class="swiper-wrapper">{% for product in collection.products %}    <div li-for="product in collection.products" class="swiper-slide is-collect">
-                                    
-                            <div class="div-block-82"><img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="image-cover">
-</div>
-                            
-                            <div class="div-block-83"><div li-object:text="product.title" class="text-size-regular text-weight-medium">
-{{ product.title }}
-</div></div>
-                            
-                        </div>
-{% endfor %}</div></div><div class="div-block-80"><div class="div-block-81 swiper-prev"><div class="swiper_button-icon is-reversed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></div><div id="w-node-_188178ee-53c0-b27c-fb92-5b1721bc4490-39d4a59b" class="div-block-81 swiper-next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></div></div></div>{% endpaginate %}
-</div></div>
-                            
-                        </div>
-{% endfor %}</div><div class="hide w-dyn-empty"><div>No items found.</div></div></div></div></div> {% schema %} {"tag":"section","name":"List-Collection","class":"section_collections","presets":[{"name":"List-Collection","category":"Liquify"}]} {% endschema %}
+{% endfor %}</div></div></div> {% schema %} {"tag":"section","name":"List-Collection","class":"section_collections","presets":[{"name":"List-Collection","category":"Liquify"}]} {% endschema %}
