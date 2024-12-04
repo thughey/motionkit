@@ -21,4 +21,8 @@
 {% endif %}{% endform %}
 <div class="margin-top-auto"><div class="product-item_form-wrapper">{% if product.available != true %}    <div li-if="product.available != true">
     <a href="#" class="button is-secondary pointer-events-off max-width-full w-button">Not in Stock</a>    </div>
-{% endif %}</div></div></div>
+{% endif %}</div></div><template x-if="!cart.items.find(item => item.product_id === product.id)">
+            <div li-js-if="!cart.items.find(item => item.product_id === product.id)" class="oddly-ph">
+        <div class="text-block">worked</div>        </div>
+    </template>
+</div>
