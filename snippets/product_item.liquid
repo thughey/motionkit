@@ -19,6 +19,6 @@
 </div></div></template>
 <div class="spacer-xsmall is-grow"></div>    </div>
 {% endif %}{% endform %}
-<div x-show="!cart.items.find(item => item.product_id === product.id)" class="oddly-ph"><div class="text-block">worked</div></div><div class="margin-top-auto"><div class="product-item_form-wrapper">{% if product.available != true %}    <div li-if="product.available != true">
+<div class="margin-top-auto"><div class="product-item_form-wrapper">{% if product.available != true %}    <div li-if="product.available != true">
     <a href="#" class="button is-secondary pointer-events-off max-width-full w-button">Not in Stock</a>    </div>
 {% endif %}</div></div></div>
