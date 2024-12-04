@@ -25,11 +25,9 @@
     </template>
 <div li-object:text="product.price | money" class="text-size-regular text-weight-medium">
 {{ product.price | money }}
-</div></div></div><div class="div-block-21"><div class="text-size-regular text-style-muted">by </div><div li-object="product.vendor" class="text-size-regular">{{ product.vendor }}</div></div></div><div class="div-block-54"><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet, consetetur adipiscing elit suspend varius enim.</p></div><template x-if="cart.items.find(item => item.product_id === product.id)">
-            <div li-js-if="cart.items.find(item => item.product_id === product.id)" class="div-block-195">
-                </div>
-    </template>
-<div class="product-header_form-block w-form">{% form 'product', product, class: 'product-header_default-state' %}
+</div></div></div><div class="div-block-21"><div class="text-size-regular text-style-muted">by </div><div li-object="product.vendor" class="text-size-regular">{{ product.vendor }}</div></div></div><div class="div-block-54"><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet, consetetur adipiscing elit suspend varius enim.</p></div>{% if !cart.items.find(item => item.product_id === product.id) %}    <div li-if="!cart.items.find(item => item.product_id === product.id)" class="div-block-195">
+        </div>
+{% endif %}<div class="product-header_form-block w-form">{% form 'product', product, class: 'product-header_default-state' %}
 {% if product.has_only_default_variant != true %}    <div li-if="product.has_only_default_variant != true" class="product-header_option-list">
     <template x-for="(option, optionKey) in product.options" :key="optionKey">
     <div li-element="product-options-loop" class="product-header_option" data-ProductVariantsLoop="true"><div li-element="product-options-name" x-text="option">Variant</div><div class="product-header_radio-list"><template x-for="(variantName, variantKey) in options_by_name[option].option.values" :key="variantName">
