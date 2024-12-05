@@ -119,6 +119,7 @@
 
 body {
   color: var(--base-color-neutral--black);
+  letter-spacing: -.02em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -1544,7 +1545,7 @@ figcaption {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
   display: flex;
 }
 
@@ -3837,6 +3838,7 @@ figcaption {
   z-index: 10;
   border-bottom: 1px solid var(--border-color--border-primary);
   background-color: var(--background-color--background-alternate);
+  margin-bottom: -1px;
   position: sticky;
   top: 0;
 }
@@ -4150,21 +4152,18 @@ figcaption {
 
 .div-block-55 {
   background-color: var(--border-color--border-primary);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.div-block-56 {
-  padding-top: 67%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .div-block-57 {
   border-radius: var(--border-radius--small);
-  background-color: var(--background-color--background-primary);
+  background-color: var(--base-color-neutral--white);
   width: 100%;
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 2rem;
   overflow: hidden;
 }
 
@@ -4514,8 +4513,12 @@ figcaption {
 .div-block-100 {
   border: 1px solid var(--border-color--border-primary);
   border-radius: var(--border-radius--small);
+  justify-content: center;
+  align-items: center;
   width: 2.2rem;
   height: 2.2rem;
+  display: flex;
+  position: relative;
 }
 
 .div-block-101 {
@@ -4537,13 +4540,13 @@ figcaption {
 }
 
 .div-block-104 {
-  grid-column-gap: .5rem;
-  grid-row-gap: .5rem;
+  grid-column-gap: .625rem;
+  grid-row-gap: .625rem;
   cursor: pointer;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.5rem;
   display: flex;
 }
 
@@ -5422,6 +5425,22 @@ figcaption {
 .text-block {
   background-color: #cacaca;
   padding: .9rem;
+}
+
+.tag {
+  background-color: var(--border-color--border-primary);
+  border-radius: .3rem;
+  padding: .2rem .4rem;
+}
+
+.div-block-196 {
+  border: 1px solid var(--border-color--border-primary);
+  border-radius: var(--border-radius--small);
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
