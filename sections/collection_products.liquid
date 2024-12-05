@@ -16,7 +16,7 @@
                         </div>
 {% endfor %}</div></div></div><div class="div-block-96 top-border"><div class="div-block-94"><div class="padding-horizontal padding-medium"><div class="div-block-95"><div class="text-size-small text-style-muted">Featured</div><div class="icon-1x1-small"></div></div></div></div><div class="div-block-97"><div class="div-block-169">{% for link in linklists['promoted'].links %}    <div li-for="link in linklists['promoted'].links">
                                     
-                            <a href="#" class="div-block-118 w-inline-block"><div class="div-block-100"><img width="30" height="30" src="{{ link.object.custom.logo | img_url: 'master' }}" loading="lazy" li-object:src="link.object.custom.logo | img_url: 'master'" alt="" class="icon-1x1-small">
+                            <a href="#" class="div-block-118 w-inline-block"><div class="div-block-100"><img width="30" height="30" src="{{ link.object.logo | img_url: 'master' }}" loading="lazy" li-object:src="link.object.custom.logo | img_url: 'master'" alt="" class="icon-1x1-small">
 </div><div class="div-block-125"><div li-object:text="link.title" class="text-size-small">
 {{ link.title }}
 </div><div class="div-block-110"><div li-object:text="link.object.all_products_count" class="text-size-tiny text-color-grey">
