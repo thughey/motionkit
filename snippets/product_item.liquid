@@ -4,7 +4,7 @@
 {% endif %}<a li-object:href="product.url" href="{{ product.url }}" class="product-item_image-wrapper w-inline-block"><img li-object:alt="product.featured_image.alt" loading="lazy" li-object:src="product.featured_image | img_url: 'master'" src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt }}" class="product-item_image">
 <div class="div-block-108"><div li-object="media | video_tag"> {% for media in product.media %}
   {% if media.media_type == 'video' %}
-    {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true, style: {{ "width: 100%; height: auto; object-fit: cover;" }}}}
+    {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}
   {% endif %}
 {% endfor %}
 </div></div></a><div class="product-item_tag_list">{% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
