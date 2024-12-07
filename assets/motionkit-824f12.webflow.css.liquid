@@ -829,7 +829,6 @@ figcaption {
 }
 
 .section_footer {
-  border-top: 1px none var(--border-color--border-primary);
   background-color: var(--base-color-neutral--black);
   color: var(--base-color-neutral--white);
   margin-top: auto;
@@ -2109,7 +2108,8 @@ figcaption {
 .product-header_gallery-lightbox.is-full {
   justify-content: flex-start;
   align-items: center;
-  padding-top: 3.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 8rem;
 }
 
 .product_thumbnail-image {
@@ -3501,8 +3501,8 @@ figcaption {
 }
 
 .header_card {
-  grid-column-gap: 6rem;
-  grid-row-gap: 6rem;
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -3975,8 +3975,8 @@ figcaption {
   flex: none;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
   display: flex;
 }
 
@@ -4198,6 +4198,10 @@ figcaption {
   inset: auto 0% -100%;
 }
 
+.hover-text.bottom.right {
+  left: auto;
+}
+
 .clip {
   flex-flow: column;
   justify-content: center;
@@ -4205,6 +4209,12 @@ figcaption {
   display: flex;
   position: relative;
   overflow: hidden;
+}
+
+.clip.right {
+  text-align: right;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .div-block-59 {
@@ -5217,6 +5227,21 @@ figcaption {
 .text-block-2 {
   color: #000;
   font-size: .7rem;
+}
+
+.div-block-203 {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.code-embed-4 {
+  justify-content: center;
+  align-items: center;
+  width: .8rem;
+  height: .8rem;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
