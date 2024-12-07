@@ -1,6 +1,6 @@
-<div class="padding-global"><div class="container-large"></div></div><div class="footer_divider"></div><div class="padding-horizontal padding-medium"><div class="container-large"><div class="footer_main-wrapper">{% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" id="w-node-c2b2a142-f022-8418-1e4f-a1042a3a4d19-cf39daf1" class="footer_link-column">
+<div class="padding-global"><div class="container-large"></div></div><div class="footer_divider"></div><div class="padding-horizontal padding-medium"><div class="container-large"><div class="footer_main-wrapper"><div id="w-node-f0508fc5-1447-9903-7587-66a02f7be6d2-cf39daf1"></div>{% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" id="w-node-c2b2a142-f022-8418-1e4f-a1042a3a4d19-cf39daf1" class="footer_link-column">
                                     
-                            <div li-object="link.title" class="text-weight-semibold hide">{{ link.title }}</div>
+                            <div li-object="link.title" class="text-weight-semibold">{{ link.title }}</div>
                             
                             <div li-for:inside="child_link in link.links" class="footer_link-list">
         {% for child_link in link.links %}                            
