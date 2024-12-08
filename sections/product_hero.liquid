@@ -35,7 +35,7 @@
                         li-object="item.media | video_tag: autoplay: true, loop: true, muted: true, controls: true, style: myStyle"
                         class="video-box"
                       >
-                        {{ item.media | video_tag: autoplay: true, loop: true, muted: true, controls: true, style: myStyle }}
+                        {{ item.media.value | video_tag: autoplay: true, loop: true, muted: true, controls: true, style: myStyle }}
                       </div>
                     </div>
                   </div>
