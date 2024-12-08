@@ -1604,14 +1604,15 @@ figcaption {
 }
 
 .product-item_image-wrapper {
+  aspect-ratio: 5 / 6;
   width: 100%;
-  padding-top: 120%;
   position: relative;
   overflow: hidden;
 }
 
 .product-item_image {
-  background-color: var(--base-color-neutral--black);
+  z-index: 5;
+  background-color: var(--base-color-neutral--neutral-lightest);
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -1637,7 +1638,7 @@ figcaption {
 }
 
 .product-item_tag_list {
-  z-index: 3;
+  z-index: 10;
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
   flex-wrap: wrap;
@@ -4512,13 +4513,12 @@ figcaption {
 
 .div-block-107 {
   border-radius: var(--border-radius--small);
-  padding-top: 120%;
   position: relative;
   overflow: hidden;
 }
 
 .div-block-108 {
-  z-index: 2;
+  z-index: 3;
   background-color: #0000;
   position: absolute;
   inset: 0%;
