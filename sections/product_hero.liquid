@@ -24,7 +24,7 @@
       >
         <div class="swiper is-product-gallery">
           <div id="my-gallery" class="swiper-wrapper is-product-gallery">
-            {% for item in product.metafields.asset_list %}
+            {% for item in product.metafields.metaobject.custom.asset_list %}
               <div li-for="item in product.metafields.custom.asset_list" class="swiper-slide is-product-gallery">
                 <div class="product-header_gallery-lightbox">
                   <div class="div-block-52">
