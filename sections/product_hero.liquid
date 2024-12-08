@@ -1,502 +1,61 @@
-<div class="product-header_component">
-  <script src="{{ 'liquify_custom.js' | asset_url }}" type="text/javascript"></script>
-  <div
-    li-element="product-variant-container"
-    class="w-layout-grid product-header_layout"
-    x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})"
-    x-init="$nextTick(() => { activateVariants() })"
-    data-productid="{{ product.id }}"
-    @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)"
-  >
-    <div id="w-node-_5576d616-789d-29ca-2839-5ac04923b886-39d4a5b4" class="div-block-17">
-      <div class="padding-horizontal padding-medium">
-        <div class="div-block-18">
-          <a href="#previews" class="link-block-3 w-inline-block"><div class="text-size-small">Previews</div></a
-          ><a href="#tutorials" class="link-block-3 w-inline-block"><div class="text-size-small">Tutorials</div></a
-          ><a href="#reviews" class="link-block-3 w-inline-block"><div class="text-size-small">Reviews</div></a>
-        </div>
-      </div>
+<div class="product-header_component"><script src="{{ 'liquify_custom.js' | asset_url }}" type="text/javascript"></script>
+<div li-element="product-variant-container" class="w-layout-grid product-header_layout" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" data-productid="{{ product.id }}" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)"><div id="w-node-_5576d616-789d-29ca-2839-5ac04923b886-39d4a5b4" class="div-block-17"><div class="padding-horizontal padding-medium"><div class="div-block-18"><a href="#previews" class="link-block-3 w-inline-block"><div class="text-size-small">Previews</div></a><a href="#tutorials" class="link-block-3 w-inline-block"><div class="text-size-small">Tutorials</div></a><a href="#reviews" class="link-block-3 w-inline-block"><div class="text-size-small">Reviews</div></a></div></div></div><div id="w-node-_945ef332-772b-0d96-f759-5fbfad4ec199-39d4a5b4" class="div-block-13"><div id="previews" class="swiper-container is-product-gallery w-node-dde72f15-2dd1-3c3f-ef72-b299bc1979d2-39d4a5b4"><div class="swiper is-product-gallery"><div id="my-gallery" class="swiper-wrapper is-product-gallery">{% for item in product.metafields.custom.asset_list.value %}    <div li-for="item in product.metafields.custom.asset_list.value" class="swiper-slide is-product-gallery">
+                                    
+                            <div class="product-header_gallery-lightbox"><div class="div-block-52"><div class="div-block-51"><div class="text-size-tiny">dimension</div></div><div class="div-block-107" style="aspect-ratio: 2 / 3"></div></div></div>
+                            
+                        </div>
+{% endfor %}</div><div class="swiper_button-wrapper is-product-slider"><a aria-label="Previous Slide" href="#" class="swiper_button swiper-prev pointer-events-on w-inline-block"><div class="swiper_button-icon is-reversed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></a><a aria-label="Next Slide" href="#" class="swiper_button swiper-next pointer-events-on w-inline-block"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></a></div></div><div class="product-header_slider-wrapper"><div class="swiper is-product-thumbnail"><div class="swiper-wrapper is-product-thumbnail">{% for image in product.images %}    <div li-for="image in product.images" class="swiper-slide is-product-thumbnail">
+                                    <img loading="lazy" li-object:src="image.src | product_img_url: 'master'" li-object:alt="image.alt" src="{{ image.src | product_img_url: 'master' }}" alt="{{ image.alt }}" class="product_thumbnail-image">
+
+                        </div>
+{% endfor %}</div></div></div><div class="swiper-slide is-product-thumbnail is-active hide"></div></div></div><div id="w-node-_507e9a00-f0e1-bf2e-8404-a968983864e6-39d4a5b4"><div id="tutorials" class="div-block-46"><div class="div-block-15"><div data-w-id="36f5844f-fd59-863c-1024-273003c2213a" class="div-block-14"><div class="padding-horizontal padding-medium"><div class="div-block-16"><div class="div-block-31"><div class="div-block-32"><div class="code-embed-4 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 21V15M16 18H22M22 10H2M22 12V8.2C22 7.0799 22 6.51984 21.782 6.09202C21.5903 5.7157 21.2843 5.40974 20.908 5.21799C20.4802 5 19.9201 5 18.8 5H5.2C4.0799 5 3.51984 5 3.09202 5.21799C2.7157 5.40973 2.40973 5.71569 2.21799 6.09202C2 6.51984 2 7.0799 2 8.2V15.8C2 16.9201 2 17.4802 2.21799 17.908C2.40973 18.2843 2.71569 18.5903 3.09202 18.782C3.51984 19 4.0799 19 5.2 19H12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="text-size-medium">Get 15% store credit back on every order</div></div><div class="div-block-34"><div class="clip right"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hover-text"><div class="text-size-tiny">Learn more</div></div><div class="hover-text bottom right"><div class="text-size-tiny">Close</div></div></div><div class="div-block-33"><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="tab-icon"><div class="icon-1x1-tiny w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div></div></div></div><div style="width:100%;height:0px" class="div-block-58"><div class="div-block-55"><div class="padding-horizontal padding-medium"><div class="div-block-57"><div class="div-block-56"></div></div></div></div></div></div><div class="div-block-15"><div data-w-id="f9fb5707-c928-c73f-fb1d-cb2d7c637a4f" class="div-block-14"><div class="padding-horizontal padding-medium"><div class="div-block-16"><div class="div-block-31"><div class="div-block-32"><div class="code-embed-4 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 7V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.11984 22 8.8 22H12.5M18 18V12.5C18 11.6716 18.6716 11 19.5 11C20.3284 11 21 11.6716 21 12.5V18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18V14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="text-size-medium">Manage your assets in one place</div></div><div class="div-block-34"><div class="clip right"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hover-text"><div class="text-size-tiny">Learn more</div></div><div class="hover-text bottom right"><div class="text-size-tiny">Close</div></div></div><div class="div-block-33"><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="tab-icon"><div class="icon-1x1-tiny w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div></div></div></div><div style="width:100%;height:0px" class="div-block-58"><div class="div-block-55"><div class="padding-horizontal padding-medium"><div class="div-block-57"><div class="div-block-56"></div></div></div></div></div></div><div class="div-block-15"><div data-w-id="9cc1abb7-5277-e3b8-b42d-999a60e7ed26" class="div-block-14"><div class="padding-horizontal padding-medium"><div class="div-block-16"><div class="div-block-31"><div class="div-block-32"><div class="code-embed-4 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 10.0001V16.0112C5 16.3702 5 16.5496 5.05465 16.7081C5.10299 16.8482 5.18187 16.9759 5.28558 17.0817C5.40287 17.2015 5.5634 17.2818 5.88446 17.4423L11.2845 20.1423C11.5468 20.2735 11.678 20.3391 11.8156 20.3649C11.9375 20.3877 12.0625 20.3877 12.1844 20.3649C12.322 20.3391 12.4532 20.2735 12.7155 20.1423L18.1155 17.4423C18.4366 17.2818 18.5971 17.2015 18.7144 17.0817C18.8181 16.9759 18.897 16.8482 18.9453 16.7081C19 16.5496 19 16.3702 19 16.0112V10.0001M2 8.50006L11.6422 3.67895C11.7734 3.61336 11.839 3.58056 11.9078 3.56766C11.9687 3.55622 12.0313 3.55622 12.0922 3.56766C12.161 3.58056 12.2266 3.61336 12.3578 3.67895L22 8.50006L12.3578 13.3212C12.2266 13.3868 12.161 13.4196 12.0922 13.4325C12.0313 13.4439 11.9687 13.4439 11.9078 13.4325C11.839 13.4196 11.7734 13.3868 11.6422 13.3212L2 8.50006Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="text-size-medium">Easy to follow tutorials</div></div><div class="div-block-34"><div class="clip right"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="hover-text"><div class="text-size-tiny">Learn more</div></div><div class="hover-text bottom right"><div class="text-size-tiny">Close</div></div></div><div class="div-block-33"><div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="tab-icon"><div class="icon-1x1-tiny w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div></div></div></div><div style="width:100%;height:0px" class="div-block-58"><div class="div-block-55"><div class="padding-horizontal padding-medium"><div class="div-block-57"><div class="div-block-56"></div></div></div></div></div></div><div class="div-block-28"><div class="padding-horizontal padding-medium"><div class="div-block-35"><div class="div-block-29"><div class="div-block-30"></div></div><div id="w-node-_2ee83b1f-6d6f-721f-2ad7-9bc3bfe2c55d-39d4a5b4" class="div-block-36"><h3 class="heading-style-h3">Manage your assets and cashback in one place</h3><div class="div-block-38"><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet, consec tetur adipiscing elit varius enim.</p></div></div></div></div></div><div class="div-block-40"><div class="div-block-41"><div class="padding-horizontal padding-medium"><div class="div-block-42"><div class="div-block-43"></div><div class="div-block-44"><div class="text-size-regular text-weight-medium">Take screenshot/recording</div><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet consecetur adipsing elit.</p></div></div></div></div><div class="div-block-41"><div class="padding-horizontal padding-medium"><div class="div-block-42"><div class="div-block-43"></div><div class="div-block-44"><div class="text-size-regular text-weight-medium">Upload to Adobe AE</div><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet consecetur adipsing elit.</p></div></div></div></div><div class="div-block-41"><div class="padding-horizontal padding-medium"><div class="div-block-42"><div class="div-block-43"></div><div class="div-block-44"><div class="text-size-regular text-weight-medium">Export your video</div><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet consecetur adipsing elit.</p></div></div></div></div></div></div><div id="reviews" class="div-block-27"></div></div><div id="w-node-_7048b639-be81-c25f-3e39-a62262971160-39d4a5b4" class="product-header_product-details"><div class="div-block-22"><template x-if="mini-cart.items.some(item => item.variant_id == selected_or_first_available_variant.id)">
+            <div li-js-if="mini-cart.items.some(item => item.variant_id == selected_or_first_available_variant.id)" class="new-test">
+        <div class="text-block">worked</div>        </div>
+    </template>
+<div class="div-block-20"><div class="product-header_tag-list"><template x-if="selected_or_first_available_variant.available != true">
+            <div li-js-if="selected_or_first_available_variant.available != true" class="product-item_tag">
+        Not in Stock        </div>
+    </template>
+<template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
+            <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price" class="product-item_tag is-red">
+        Sale        </div>
+    </template>
+</div><div class="div-block-19"><h1 li-object:text="product.title" class="heading-style-h3">
+{{ product.title }}
+</h1><div class="product-header_price-wrapper"><template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
+            <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
+        <div li-object="product.compare_at_price | money" class="text-size-regular text-style-strikethrough text-align-right text-style-muted">{{ product.compare_at_price | money }}</div>        </div>
+    </template>
+<div li-object:text="product.price | money" class="text-size-regular text-weight-medium">
+{{ product.price | money }}
+</div></div></div><div class="div-block-21"><div class="text-size-regular text-style-muted">by </div><div li-object="product.vendor" class="text-size-regular">{{ product.vendor }}</div></div></div><div class="div-block-54"><p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet, consetetur adipiscing elit suspend varius enim.</p></div><div class="product-header_form-block w-form">{% form 'product', product, class: 'product-header_default-state' %}
+{% if product.has_only_default_variant != true %}    <div li-if="product.has_only_default_variant != true" class="product-header_option-list">
+    <template x-for="(option, optionKey) in product.options" :key="optionKey">
+    <div li-element="product-options-loop" class="product-header_option" data-ProductVariantsLoop="true"><div li-element="product-options-name" x-text="option">Variant</div><div class="product-header_radio-list"><template x-for="(variantName, variantKey) in options_by_name[option].option.values" :key="variantName">
+    <label li-element="product-option-loop" class="product-header_radio w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom product-header_radio-button w-radio-input"></div><input type="radio" li-element="product-option-input" style="opacity:0;position:absolute;z-index:-1" x-on:click="setVariant" :name="option" :data-name="option" :value="variantName" :id="variantName.toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-')" :checked="selected_or_first_available_variant?.options.includes(variantName)" data-selectorType="radio" :class="firstOptionHasAvailableChildren[variantName] ? '' : 'data-disabled'">
+<span li-element="product-option-name" class="text-size-regular text-weight-semibold w-form-label" for="radio" x-text="variantName" :for="variantName">XS</span></label></template>
+</div></div></template>
     </div>
-    <div id="w-node-_945ef332-772b-0d96-f759-5fbfad4ec199-39d4a5b4" class="div-block-13">
-      <div
-        id="previews"
-        class="swiper-container is-product-gallery w-node-dde72f15-2dd1-3c3f-ef72-b299bc1979d2-39d4a5b4"
-      >
-        <div class="swiper is-product-gallery">
-          <div id="my-gallery" class="swiper-wrapper is-product-gallery">
-            {% for item in product.metafields.custom.asset_list.value %}
-              <div li-for="item in product.metafields.custom.asset_list" class="swiper-slide is-product-gallery">
-                <div class="product-header_gallery-lightbox">
-                  <div class="div-block-52">
-                    <div class="div-block-51"><div class="text-size-tiny">dimension</div></div>
-                    <div class="div-block-107"></div>
-                  </div>
-                </div>
-              </div>
-            {% endfor %}
-          </div>
-          <div class="swiper_button-wrapper is-product-slider">
-            <a aria-label="Previous Slide" href="#" class="swiper_button swiper-prev pointer-events-on w-inline-block">
-              <div class="swiper_button-icon is-reversed w-embed">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
-                  <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g>
-                </svg>
-              </div></a
-            ><a aria-label="Next Slide" href="#" class="swiper_button swiper-next pointer-events-on w-inline-block">
-              <div class="swiper_button-icon w-embed">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
-                  <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g>
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="product-header_slider-wrapper">
-          <div class="swiper is-product-thumbnail">
-            <div class="swiper-wrapper is-product-thumbnail">
-              {% for image in product.images %}
-                <div li-for="image in product.images" class="swiper-slide is-product-thumbnail">
-                  <img
-                    loading="lazy"
-                    li-object:src="image.src | product_img_url: 'master'"
-                    li-object:alt="image.alt"
-                    src="{{ image.src | product_img_url: 'master' }}"
-                    alt="{{ image.alt }}"
-                    class="product_thumbnail-image"
-                  >
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide is-product-thumbnail is-active hide"></div>
-      </div>
-    </div>
-    <div id="w-node-_507e9a00-f0e1-bf2e-8404-a968983864e6-39d4a5b4">
-      <div id="tutorials" class="div-block-46">
-        <div class="div-block-15">
-          <div data-w-id="36f5844f-fd59-863c-1024-273003c2213a" class="div-block-14">
-            <div class="padding-horizontal padding-medium">
-              <div class="div-block-16">
-                <div class="div-block-31">
-                  <div class="div-block-32">
-                    <div class="code-embed-4 w-embed">
-                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 21V15M16 18H22M22 10H2M22 12V8.2C22 7.0799 22 6.51984 21.782 6.09202C21.5903 5.7157 21.2843 5.40974 20.908 5.21799C20.4802 5 19.9201 5 18.8 5H5.2C4.0799 5 3.51984 5 3.09202 5.21799C2.7157 5.40973 2.40973 5.71569 2.21799 6.09202C2 6.51984 2 7.0799 2 8.2V15.8C2 16.9201 2 17.4802 2.21799 17.908C2.40973 18.2843 2.71569 18.5903 3.09202 18.782C3.51984 19 4.0799 19 5.2 19H12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="text-size-medium">Get 15% store credit back on every order</div>
-                </div>
-                <div class="div-block-34">
-                  <div class="clip right">
-                    <div
-                      style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                      class="hover-text"
-                    >
-                      <div class="text-size-tiny">Learn more</div>
-                    </div>
-                    <div class="hover-text bottom right"><div class="text-size-tiny">Close</div></div>
-                  </div>
-                  <div class="div-block-33">
-                    <div
-                      style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                      class="tab-icon"
-                    >
-                      <div class="icon-1x1-tiny w-embed">
-                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="width:100%;height:0px" class="div-block-58">
-            <div class="div-block-55">
-              <div class="padding-horizontal padding-medium">
-                <div class="div-block-57"><div class="div-block-56"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-15">
-          <div data-w-id="f9fb5707-c928-c73f-fb1d-cb2d7c637a4f" class="div-block-14">
-            <div class="padding-horizontal padding-medium">
-              <div class="div-block-16">
-                <div class="div-block-31">
-                  <div class="div-block-32">
-                    <div class="code-embed-4 w-embed">
-                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 7V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.11984 22 8.8 22H12.5M18 18V12.5C18 11.6716 18.6716 11 19.5 11C20.3284 11 21 11.6716 21 12.5V18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18V14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="text-size-medium">Manage your assets in one place</div>
-                </div>
-                <div class="div-block-34">
-                  <div class="clip right">
-                    <div
-                      style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                      class="hover-text"
-                    >
-                      <div class="text-size-tiny">Learn more</div>
-                    </div>
-                    <div class="hover-text bottom right"><div class="text-size-tiny">Close</div></div>
-                  </div>
-                  <div class="div-block-33">
-                    <div
-                      style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                      class="tab-icon"
-                    >
-                      <div class="icon-1x1-tiny w-embed">
-                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="width:100%;height:0px" class="div-block-58">
-            <div class="div-block-55">
-              <div class="padding-horizontal padding-medium">
-                <div class="div-block-57"><div class="div-block-56"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-15">
-          <div data-w-id="9cc1abb7-5277-e3b8-b42d-999a60e7ed26" class="div-block-14">
-            <div class="padding-horizontal padding-medium">
-              <div class="div-block-16">
-                <div class="div-block-31">
-                  <div class="div-block-32">
-                    <div class="code-embed-4 w-embed">
-                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 10.0001V16.0112C5 16.3702 5 16.5496 5.05465 16.7081C5.10299 16.8482 5.18187 16.9759 5.28558 17.0817C5.40287 17.2015 5.5634 17.2818 5.88446 17.4423L11.2845 20.1423C11.5468 20.2735 11.678 20.3391 11.8156 20.3649C11.9375 20.3877 12.0625 20.3877 12.1844 20.3649C12.322 20.3391 12.4532 20.2735 12.7155 20.1423L18.1155 17.4423C18.4366 17.2818 18.5971 17.2015 18.7144 17.0817C18.8181 16.9759 18.897 16.8482 18.9453 16.7081C19 16.5496 19 16.3702 19 16.0112V10.0001M2 8.50006L11.6422 3.67895C11.7734 3.61336 11.839 3.58056 11.9078 3.56766C11.9687 3.55622 12.0313 3.55622 12.0922 3.56766C12.161 3.58056 12.2266 3.61336 12.3578 3.67895L22 8.50006L12.3578 13.3212C12.2266 13.3868 12.161 13.4196 12.0922 13.4325C12.0313 13.4439 11.9687 13.4439 11.9078 13.4325C11.839 13.4196 11.7734 13.3868 11.6422 13.3212L2 8.50006Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="text-size-medium">Easy to follow tutorials</div>
-                </div>
-                <div class="div-block-34">
-                  <div class="clip right">
-                    <div
-                      style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                      class="hover-text"
-                    >
-                      <div class="text-size-tiny">Learn more</div>
-                    </div>
-                    <div class="hover-text bottom right"><div class="text-size-tiny">Close</div></div>
-                  </div>
-                  <div class="div-block-33">
-                    <div
-                      style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                      class="tab-icon"
-                    >
-                      <div class="icon-1x1-tiny w-embed">
-                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="width:100%;height:0px" class="div-block-58">
-            <div class="div-block-55">
-              <div class="padding-horizontal padding-medium">
-                <div class="div-block-57"><div class="div-block-56"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-28">
-          <div class="padding-horizontal padding-medium">
-            <div class="div-block-35">
-              <div class="div-block-29"><div class="div-block-30"></div></div>
-              <div id="w-node-_2ee83b1f-6d6f-721f-2ad7-9bc3bfe2c55d-39d4a5b4" class="div-block-36">
-                <h3 class="heading-style-h3">Manage your assets and cashback in one place</h3>
-                <div class="div-block-38">
-                  <p class="text-size-regular text-style-muted">
-                    Lorem ipsum dolor sit amet, consec tetur adipiscing elit varius enim.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-40">
-          <div class="div-block-41">
-            <div class="padding-horizontal padding-medium">
-              <div class="div-block-42">
-                <div class="div-block-43"></div>
-                <div class="div-block-44">
-                  <div class="text-size-regular text-weight-medium">Take screenshot/recording</div>
-                  <p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet consecetur adipsing elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="div-block-41">
-            <div class="padding-horizontal padding-medium">
-              <div class="div-block-42">
-                <div class="div-block-43"></div>
-                <div class="div-block-44">
-                  <div class="text-size-regular text-weight-medium">Upload to Adobe AE</div>
-                  <p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet consecetur adipsing elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="div-block-41">
-            <div class="padding-horizontal padding-medium">
-              <div class="div-block-42">
-                <div class="div-block-43"></div>
-                <div class="div-block-44">
-                  <div class="text-size-regular text-weight-medium">Export your video</div>
-                  <p class="text-size-regular text-style-muted">Lorem ipsum dolor sit amet consecetur adipsing elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="reviews" class="div-block-27"></div>
-    </div>
-    <div id="w-node-_7048b639-be81-c25f-3e39-a62262971160-39d4a5b4" class="product-header_product-details">
-      <div class="div-block-22">
-        <template x-if="mini-cart.items.some(item => item.variant_id == selected_or_first_available_variant.id)">
-          <div
-            li-js-if="mini-cart.items.some(item => item.variant_id == selected_or_first_available_variant.id)"
-            class="new-test"
-          >
-            <div class="text-block">worked</div>
-          </div>
-        </template>
-        <div class="div-block-20">
-          <div class="product-header_tag-list">
-            <template x-if="selected_or_first_available_variant.available != true">
-              <div li-js-if="selected_or_first_available_variant.available != true" class="product-item_tag">
-                Not in Stock
-              </div>
-            </template>
-            <template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
-              <div
-                li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price"
-                class="product-item_tag is-red"
-              >
-                Sale
-              </div>
-            </template>
-          </div>
-          <div class="div-block-19">
-            <h1 li-object:text="product.title" class="heading-style-h3">
-              {{ product.title }}
-            </h1>
-            <div class="product-header_price-wrapper">
-              <template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
-                <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
-                  <div
-                    li-object="product.compare_at_price | money"
-                    class="text-size-regular text-style-strikethrough text-align-right text-style-muted"
-                  >
-                    {{ product.compare_at_price | money }}
-                  </div>
-                </div>
-              </template>
-              <div li-object:text="product.price | money" class="text-size-regular text-weight-medium">
-                {{ product.price | money }}
-              </div>
-            </div>
-          </div>
-          <div class="div-block-21">
-            <div class="text-size-regular text-style-muted">by</div>
-            <div li-object="product.vendor" class="text-size-regular">{{ product.vendor }}</div>
-          </div>
-        </div>
-        <div class="div-block-54">
-          <p class="text-size-regular text-style-muted">
-            Lorem ipsum dolor sit amet, consetetur adipiscing elit suspend varius enim.
-          </p>
-        </div>
-        <div class="product-header_form-block w-form">
-          {% form 'product', product, class: 'product-header_default-state' %}
-            {% if product.has_only_default_variant != true %}
-              <div li-if="product.has_only_default_variant != true" class="product-header_option-list">
-                <template x-for="(option, optionKey) in product.options" :key="optionKey">
-                  <div li-element="product-options-loop" class="product-header_option" data-ProductVariantsLoop="true">
-                    <div li-element="product-options-name" x-text="option">Variant</div>
-                    <div class="product-header_radio-list">
-                      <template
-                        x-for="(variantName, variantKey) in options_by_name[option].option.values"
-                        :key="variantName"
-                      >
-                        <label li-element="product-option-loop" class="product-header_radio w-radio">
-                          <div
-                            class="w-form-formradioinput w-form-formradioinput--inputType-custom product-header_radio-button w-radio-input"
-                          ></div>
-                          <input
-                            type="radio"
-                            li-element="product-option-input"
-                            style="opacity:0;position:absolute;z-index:-1"
-                            x-on:click="setVariant"
-                            :name="option"
-                            :data-name="option"
-                            :value="variantName"
-                            :id="variantName.toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-')"
-                            :checked="selected_or_first_available_variant?.options.includes(variantName)"
-                            data-selectorType="radio"
-                            :class="firstOptionHasAvailableChildren[variantName] ? '' : 'data-disabled'"
-                          >
-                          <span
-                            li-element="product-option-name"
-                            class="text-size-regular text-weight-semibold w-form-label"
-                            for="radio"
-                            x-text="variantName"
-                            :for="variantName"
-                            >XS</span
-                          ></label
-                        ></template
-                      >
-                    </div>
-                  </div>
-                </template>
-              </div>
-            {% endif %}
-            <div class="product-header_add-to-cart-wrapper">
-              <template x-if="selected_or_first_available_variant.available">
-                <div li-js-if="selected_or_first_available_variant.available" class="product-header_buy-wrappper">
-                  <input
-                    class="form_input is-quantity w-input"
-                    maxlength="256"
-                    name="quantity"
-                    li-element="add-to-cart-quantity"
-                    data-name="quantity"
-                    placeholder="1"
-                    type="number"
-                    id="quantity"
-                    required=""
-                    x-model="quantity"
-                  >
-                  <a
-                    li-element="add-to-cart"
-                    href="#"
-                    class="button action-big w-button"
-                    @click="addToCart(true)"
-                    :disabled="!addToCartButton"
-                    >Add to cart</a
-                  >
-                </div>
-              </template>
-              <template x-if="!selected_or_first_available_variant.available">
-                <div li-js-if="!selected_or_first_available_variant.available" class="product-header_out-of-stock">
-                  <a href="#" class="button is-secondary max-width-full pointer-events-off w-button">Not in Stock</a>
-                </div>
-              </template>
-            </div>
-          {% endform %}
-          <div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div>
-          <div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div>
-        </div>
-        <div class="product-header_shipping-wrapper hide">
-          <template x-if="selected_or_first_available_variant.available == true">
+{% endif %}<div class="product-header_add-to-cart-wrapper"><template x-if="selected_or_first_available_variant.available">
+            <div li-js-if="selected_or_first_available_variant.available" class="product-header_buy-wrappper">
+        <input class="form_input is-quantity w-input" maxlength="256" name="quantity" li-element="add-to-cart-quantity" data-name="quantity" placeholder="1" type="number" id="quantity" required="" x-model="quantity">
+<a li-element="add-to-cart" href="#" class="button action-big w-button" @click="addToCart(true)" :disabled="!addToCartButton">Add to cart</a>        </div>
+    </template>
+<template x-if="!selected_or_first_available_variant.available">
+            <div li-js-if="!selected_or_first_available_variant.available" class="product-header_out-of-stock">
+        <a href="#" class="button is-secondary max-width-full pointer-events-off w-button">Not in Stock</a>        </div>
+    </template>
+</div>{% endform %}
+<div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div><div class="product-header_shipping-wrapper hide"><template x-if="selected_or_first_available_variant.available == true">
             <div li-js-if="selected_or_first_available_variant.available == true" class="product-header_shipping">
-              <div class="product-header_shipping-icon w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100%"
-                  height="100%"
-                  viewbox="0 0 23 22"
-                  fill="none"
-                  preserveaspectratio="xMidYMid meet"
-                  aria-hidden="true"
-                  role="img"
-                >
-                  <mask id="mask0_1611_6356" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22"><rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_1611_6356)"><path d="M13.9736 18.3334C11.9264 18.3334 10.1923 17.623 8.77151 16.2022C7.35068 14.7813 6.64026 13.0473 6.64026 11.0001C6.64026 8.96814 7.35068 7.23793 8.77151 5.80946C10.1923 4.38098 11.9264 3.66675 13.9736 3.66675C16.0055 3.66675 17.7357 4.38098 19.1642 5.80946C20.5927 7.23793 21.3069 8.96814 21.3069 11.0001C21.3069 13.0473 20.5927 14.7813 19.1642 16.2022C17.7357 17.623 16.0055 18.3334 13.9736 18.3334ZM13.9736 16.5001C15.5014 16.5001 16.8 15.9654 17.8694 14.8959C18.9389 13.8265 19.4736 12.5279 19.4736 11.0001C19.4736 9.4723 18.9389 8.17369 17.8694 7.10425C16.8 6.0348 15.5014 5.50008 13.9736 5.50008C12.4458 5.50008 11.1472 6.0348 10.0778 7.10425C9.00831 8.17369 8.47359 9.4723 8.47359 11.0001C8.47359 12.5279 9.00831 13.8265 10.0778 14.8959C11.1472 15.9654 12.4458 16.5001 13.9736 16.5001ZM16.059 14.4147L17.3653 13.1084L14.8903 10.6334V7.33341H13.0569V11.3897L16.059 14.4147ZM2.05693 8.25008V6.41675H5.72359V8.25008H2.05693ZM1.14026 11.9167V10.0834H5.72359V11.9167H1.14026ZM2.05693 15.5834V13.7501H5.72359V15.5834H2.05693Z" fill="#323232"></path></g>
-                </svg>
-              </div>
-              <div>Delivery: <span>1–3 Days</span></div>
-            </div>
-          </template>
-          <div class="product-header_shipping">
-            <div class="product-header_shipping-icon w-embed">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                viewbox="0 0 23 22"
-                fill="none"
-                preserveaspectratio="xMidYMid meet"
-                aria-hidden="true"
-                role="img"
-              >
-                <mask id="mask0_1612_6254" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22"><rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_1612_6254)"><path d="M11.223 10.9999C11.7271 10.9999 12.1587 10.8204 12.5178 10.4614C12.8768 10.1023 13.0563 9.67075 13.0563 9.16659C13.0563 8.66242 12.8768 8.23082 12.5178 7.87179C12.1587 7.51277 11.7271 7.33325 11.223 7.33325C10.7188 7.33325 10.2872 7.51277 9.92819 7.87179C9.56916 8.23082 9.38965 8.66242 9.38965 9.16659C9.38965 9.67075 9.56916 10.1023 9.92819 10.4614C10.2872 10.8204 10.7188 10.9999 11.223 10.9999ZM11.223 17.7374C13.0869 16.0263 14.4695 14.4718 15.3709 13.0739C16.2723 11.676 16.723 10.4346 16.723 9.34992C16.723 7.68464 16.1921 6.3211 15.1303 5.25929C14.0685 4.19749 12.766 3.66659 11.223 3.66659C9.67993 3.66659 8.3775 4.19749 7.31569 5.25929C6.25388 6.3211 5.72298 7.68464 5.72298 9.34992C5.72298 10.4346 6.17368 11.676 7.07507 13.0739C7.97645 14.4718 9.35909 16.0263 11.223 17.7374ZM11.223 20.1666C8.76326 18.0735 6.92611 16.1294 5.71152 14.3343C4.49694 12.5392 3.88965 10.8777 3.88965 9.34992C3.88965 7.05825 4.6268 5.23256 6.10111 3.87284C7.57541 2.51311 9.2827 1.83325 11.223 1.83325C13.1633 1.83325 14.8706 2.51311 16.3449 3.87284C17.8192 5.23256 18.5563 7.05825 18.5563 9.34992C18.5563 10.8777 17.949 12.5392 16.7344 14.3343C15.5199 16.1294 13.6827 18.0735 11.223 20.1666Z" fill="#323232"></path></g>
-              </svg>
-            </div>
-            <div>
-              Availability:
-              <template x-if="selected_or_first_available_variant.available == true">
-                <span li-js-if="selected_or_first_available_variant.available == true" class="text-color-green">
-                  available
-                </span>
-              </template>
-              <template x-if="selected_or_first_available_variant.available == false">
-                <span li-js-if="selected_or_first_available_variant.available == false" class="text-color-red">
-                  not available
-                </span>
-              </template>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-23">
-          <div class="div-block-24">
-            <p class="text-size-regular">
-              "Lorem ipsum dolor sit amet, consetetur adipiscing elit suspendisse varius enim"
-            </p>
-          </div>
-          <div><div class="text-size-small">Clinton S.</div></div>
-        </div>
-        <div class="div-block-49">
-          <div class="div-block-26">
-            <div class="div-block-25">
-              <div class="text-size-small">Features</div>
-              <div class="icon-1x1-tiny w-embed">
-                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </div>
-            </div>
-            <div class="div-block-50">
-              <div class="div-block-39">
-                <div class="div-block-47">
-                  <div class="div-block-48"></div>
-                  <div class="text-size-small">Dimensions:</div>
-                  <div id="w-node-_8de2392d-7e2a-4ca5-5175-0172435ab187-39d4a5b4" class="text-size-small">
-                    1920x1080, 1920x1080, 1920x1080
-                  </div>
-                </div>
-                <div class="div-block-47">
-                  <div class="div-block-48"></div>
-                  <div class="text-size-small">Looping video</div>
-                </div>
-                <div class="div-block-47">
-                  <div class="div-block-48"></div>
-                  <div class="text-size-small">6 seconds</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% schema %} {"tag":"div","name":"Product-Hero","class":"section_product-header","presets":[{"name":"Product-Hero","category":"Liquify"}]} {% endschema %}
+        <div class="product-header_shipping-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 23 22" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_1611_6356" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22"><rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_1611_6356)"><path d="M13.9736 18.3334C11.9264 18.3334 10.1923 17.623 8.77151 16.2022C7.35068 14.7813 6.64026 13.0473 6.64026 11.0001C6.64026 8.96814 7.35068 7.23793 8.77151 5.80946C10.1923 4.38098 11.9264 3.66675 13.9736 3.66675C16.0055 3.66675 17.7357 4.38098 19.1642 5.80946C20.5927 7.23793 21.3069 8.96814 21.3069 11.0001C21.3069 13.0473 20.5927 14.7813 19.1642 16.2022C17.7357 17.623 16.0055 18.3334 13.9736 18.3334ZM13.9736 16.5001C15.5014 16.5001 16.8 15.9654 17.8694 14.8959C18.9389 13.8265 19.4736 12.5279 19.4736 11.0001C19.4736 9.4723 18.9389 8.17369 17.8694 7.10425C16.8 6.0348 15.5014 5.50008 13.9736 5.50008C12.4458 5.50008 11.1472 6.0348 10.0778 7.10425C9.00831 8.17369 8.47359 9.4723 8.47359 11.0001C8.47359 12.5279 9.00831 13.8265 10.0778 14.8959C11.1472 15.9654 12.4458 16.5001 13.9736 16.5001ZM16.059 14.4147L17.3653 13.1084L14.8903 10.6334V7.33341H13.0569V11.3897L16.059 14.4147ZM2.05693 8.25008V6.41675H5.72359V8.25008H2.05693ZM1.14026 11.9167V10.0834H5.72359V11.9167H1.14026ZM2.05693 15.5834V13.7501H5.72359V15.5834H2.05693Z" fill="#323232"></path></g></svg></div><div>Delivery: <span>1–3 Days</span></div>        </div>
+    </template>
+<div class="product-header_shipping"><div class="product-header_shipping-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 23 22" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_1612_6254" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22"><rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_1612_6254)"><path d="M11.223 10.9999C11.7271 10.9999 12.1587 10.8204 12.5178 10.4614C12.8768 10.1023 13.0563 9.67075 13.0563 9.16659C13.0563 8.66242 12.8768 8.23082 12.5178 7.87179C12.1587 7.51277 11.7271 7.33325 11.223 7.33325C10.7188 7.33325 10.2872 7.51277 9.92819 7.87179C9.56916 8.23082 9.38965 8.66242 9.38965 9.16659C9.38965 9.67075 9.56916 10.1023 9.92819 10.4614C10.2872 10.8204 10.7188 10.9999 11.223 10.9999ZM11.223 17.7374C13.0869 16.0263 14.4695 14.4718 15.3709 13.0739C16.2723 11.676 16.723 10.4346 16.723 9.34992C16.723 7.68464 16.1921 6.3211 15.1303 5.25929C14.0685 4.19749 12.766 3.66659 11.223 3.66659C9.67993 3.66659 8.3775 4.19749 7.31569 5.25929C6.25388 6.3211 5.72298 7.68464 5.72298 9.34992C5.72298 10.4346 6.17368 11.676 7.07507 13.0739C7.97645 14.4718 9.35909 16.0263 11.223 17.7374ZM11.223 20.1666C8.76326 18.0735 6.92611 16.1294 5.71152 14.3343C4.49694 12.5392 3.88965 10.8777 3.88965 9.34992C3.88965 7.05825 4.6268 5.23256 6.10111 3.87284C7.57541 2.51311 9.2827 1.83325 11.223 1.83325C13.1633 1.83325 14.8706 2.51311 16.3449 3.87284C17.8192 5.23256 18.5563 7.05825 18.5563 9.34992C18.5563 10.8777 17.949 12.5392 16.7344 14.3343C15.5199 16.1294 13.6827 18.0735 11.223 20.1666Z" fill="#323232"></path></g></svg></div><div>Availability: <template x-if="selected_or_first_available_variant.available == true">
+            <span li-js-if="selected_or_first_available_variant.available == true" class="text-color-green">
+        available        </span>
+    </template>
+<template x-if="selected_or_first_available_variant.available == false">
+            <span li-js-if="selected_or_first_available_variant.available == false" class="text-color-red">
+        not available        </span>
+    </template>
+</div></div></div><div class="div-block-23"><div class="div-block-24"><p class="text-size-regular">"Lorem ipsum dolor sit amet, consetetur adipiscing elit suspendisse varius enim"</p></div><div><div class="text-size-small">Clinton S.</div></div></div><div class="div-block-49"><div class="div-block-26"><div class="div-block-25"><div class="text-size-small">Features</div><div class="icon-1x1-tiny w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19M5 12H19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="div-block-50"><div class="div-block-39"><div class="div-block-47"><div class="div-block-48"></div><div class="text-size-small">Dimensions: </div><div id="w-node-_8de2392d-7e2a-4ca5-5175-0172435ab187-39d4a5b4" class="text-size-small">1920x1080, 1920x1080, 1920x1080</div></div><div class="div-block-47"><div class="div-block-48"></div><div class="text-size-small">Looping video</div></div><div class="div-block-47"><div class="div-block-48"></div><div class="text-size-small">6 seconds</div></div></div></div></div></div></div></div></div></div> {% schema %} {"tag":"div","name":"Product-Hero","class":"section_product-header","presets":[{"name":"Product-Hero","category":"Liquify"}]} {% endschema %}
