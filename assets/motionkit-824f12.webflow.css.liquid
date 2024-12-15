@@ -830,7 +830,7 @@ figcaption {
 
 .section_footer {
   border-top: 1px solid var(--border-color--border-primary);
-  color: var(--base-color-neutral--white);
+  color: var(--base-color-neutral--black);
   margin-top: auto;
 }
 
@@ -1360,7 +1360,7 @@ figcaption {
 
 .login_tabs {
   width: 100%;
-  max-width: 650px;
+  max-width: 35rem;
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -3648,7 +3648,7 @@ figcaption {
   flex-flow: wrap;
   justify-content: flex-end;
   align-items: center;
-  display: flex;
+  display: none;
 }
 
 .footer_legal-link {
@@ -4081,8 +4081,10 @@ figcaption {
 }
 
 .div-block-46 {
+  flex-flow: column;
   margin-top: -4rem;
   padding-top: 4rem;
+  display: flex;
 }
 
 .div-block-47 {
@@ -4143,6 +4145,8 @@ figcaption {
   justify-content: flex-start;
   align-items: center;
   min-height: 100%;
+  padding-left: .5rem;
+  padding-right: .5rem;
   display: flex;
 }
 
@@ -4744,7 +4748,7 @@ figcaption {
 
 .div-block-154 {
   grid-template-rows: auto 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr;
   grid-auto-columns: 1fr;
   display: grid;
 }
@@ -4757,7 +4761,7 @@ figcaption {
   max-height: 100vh;
   margin-top: -4rem;
   padding-top: 4rem;
-  display: flex;
+  display: none;
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -6859,14 +6863,14 @@ figcaption {
 
 #w-node-a80f8362-260a-7256-86a7-00b709fa7e51-39d4a5b5 {
   grid-area: span 1 / span 1 / span 1 / span 1;
-  place-self: center;
+  place-self: center stretch;
 }
 
 #w-node-a80f8362-260a-7256-86a7-00b709fa7e52-39d4a5b5 {
   align-self: center;
 }
 
-#w-node-a80f8362-260a-7256-86a7-00b709fa7e67-39d4a5b5, #w-node-a80f8362-260a-7256-86a7-00b709fa7e72-39d4a5b5, #w-node-a80f8362-260a-7256-86a7-00b709fa7e73-39d4a5b5, #w-node-b92a1df1-2576-4fde-2b10-96c423ecbb42-39d4a5b6, #w-node-_18b99dbe-6ff4-693a-5d15-824c10ee554f-39d4a5b7, #w-node-b90266f4-7b7e-d3a3-be54-12662ea8929f-39d4a5c9 {
+#w-node-a80f8362-260a-7256-86a7-00b709fa7e67-39d4a5b5, #w-node-b92a1df1-2576-4fde-2b10-96c423ecbb42-39d4a5b6, #w-node-_18b99dbe-6ff4-693a-5d15-824c10ee554f-39d4a5b7, #w-node-b90266f4-7b7e-d3a3-be54-12662ea8929f-39d4a5c9 {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
@@ -6951,10 +6955,6 @@ figcaption {
 
   #w-node-a80f8362-260a-7256-86a7-00b709fa7e51-39d4a5b5 {
     align-self: start;
-  }
-
-  #w-node-a80f8362-260a-7256-86a7-00b709fa7e72-39d4a5b5, #w-node-a80f8362-260a-7256-86a7-00b709fa7e73-39d4a5b5 {
-    order: -9999;
   }
 }
 
